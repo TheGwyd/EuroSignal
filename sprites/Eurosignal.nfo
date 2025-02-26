@@ -4,7 +4,7 @@
 // Escapes: 71 70 7= 7! 7< 7> 7G 7g 7gG 7GG 7gg 7c 7C
 // Escapes: D= = DR D+ = DF D0 = D- = DC Du* = DM D* = DnF Du<< = DnC D<< = DO D& D| Du/ D/ Du% D%
 // Format: spritenum pcxfile xpos ypos compression ysize xsize xrel yrel
-    0 * 4	 B0 03 00 00
+    0 * 4	 AE 03 00 00
     1 * 86	 14 "C" "INFO"
 		"T" "NAME" 7f "EuroSignal" 00 
 		"T" "DESC" 7f "Work In Progress" 00 
@@ -175,15 +175,15 @@
 	00
 
 
-   19 * 248	 14 "C" "INFO"
+   19 * 254	 14 "C" "INFO"
                  "C" "PARA"
                      "C" \d0
                          "T" "NAME" 01 "Signal Selection" 00
                          "T" "DESC" 01 "Range of signals avaliable in game" 00
                          "B" "TYPE" \w1 00
-                         "B" "LIMI" \w8 \d00 \d03
+                         "B" "LIMI" \w8 \d00 \d01
 						 "C" "VALU"
-                             "T" \d00 7F "Western Europe" 00
+                             "T" \d00 7F "Western Europe (WIP)" 00
                              "T" \d01 00 "British" 00
                              "T" \d02 00 8B "Benelux (WIP)" 00
                              "T" \d03 00 8B "Nordic (WIP)" 00
@@ -230,493 +230,491 @@
    "UK (Shunt)" 00
 
 
-   23 * 6	 07 86 00 00 04 03 //If var 86 bit 4 is set, skip 3 sprites
+   23 * 6	 07 86 00 00 04 02 //If var 86 bit 4 is set, skip 3 sprites
 //Left side signals stay on left
    24 * 9	 0D 02 00 FF FF \d0
 //Right side signals move to right
    25 * 9	 0D 03 00 01 FF \d1
-   26 * 70	 0B 01 7F FF "Drive side appears to be on the left" 0D 80 0D 80 0D 7B 0D 7B 00 "Placeholder string" 00 02 03
 
 
-   27 * 6	 07 86 00 01 04 03 //If var 86 bit 4 is not set, skip 3 sprites
+   26 * 6	 07 86 00 01 04 02 //If var 86 bit 4 is not set, skip 3 sprites
 //Left side signals stay on left
-   28 * 9	 0D 03 00 FF FF \d0
+   27 * 9	 0D 03 00 FF FF \d0
 //Right side signals move to right
-   29 * 9	 0D 02 00 01 FF \d1
-   30 * 71	 0B 00 7F FF "Drive side appears to be on the right" 0D 80 0D 80 0D 7B 0D 7B 00 "Placeholder string" 00 02 03
+   28 * 9	 0D 02 00 01 FF \d1
 
 
 
 
 //!!Error (44): Invalid feature byte.
-   31 * 4	 01 0E 36 08
+   29 * 4	 01 0E 36 08
 
-   32 sprites/gfx/uk.png 00 00 9 35 20 -9 -30	//UK Semaphore Block Signal Red (00)
-   33 sprites/gfx/uk.png 21 00 9 35 20 -9 -30
-   34 sprites/gfx/uk.png 42 00 9 35 20 -9 -30
-   35 sprites/gfx/uk.png 63 00 9 35 20 -9 -30
-   36 sprites/gfx/uk.png 84 00 9 35 20 -9 -30
-   37 sprites/gfx/uk.png 105 00 9 35 20 -9 -30
-   38 sprites/gfx/uk.png 126 00 9 35 20 -9 -30
-   39 sprites/gfx/uk.png 147 00 9 35 20 -9 -30	
-   40 sprites/gfx/uk.png 00 36 9 35 20 -9 -30	//UK Semaphore Block Signal Green (01)
-   41 sprites/gfx/uk.png 21 36 9 35 20 -9 -30
-   42 sprites/gfx/uk.png 42 36 9 35 20 -9 -30
-   43 sprites/gfx/uk.png 63 36 9 35 20 -9 -30
-   44 sprites/gfx/uk.png 84 36 9 35 20 -9 -30
-   45 sprites/gfx/uk.png 105 36 9 35 20 -9 -30
-   46 sprites/gfx/uk.png 126 36 9 35 20 -9 -30
-   47 sprites/gfx/uk.png 147 36 9 35 20 -9 -30
-   48 sprites/gfx/uk.png 200 216 9 35 36 -17 -31	//UK Semaphore Path Signal Red (02)
-   49 sprites/gfx/uk.png 237 216 9 35 36 -17 -31
-   50 sprites/gfx/uk.png 274 216 9 35 36 -17 -31
-   51 sprites/gfx/uk.png 311 216 9 35 36 -17 -31
-   52 sprites/gfx/uk.png 348 216 9 35 36 -17 -31
-   53 sprites/gfx/uk.png 385 216 9 35 36 -17 -31
-   54 sprites/gfx/uk.png 422 216 9 35 36 -17 -31
-   55 sprites/gfx/uk.png 459 216 9 35 36 -17 -31
-   56 sprites/gfx/uk.png 200 252 9 35 36 -17 -31	//UK Semaphore Path Signal Green (03)
-   57 sprites/gfx/uk.png 237 252 9 35 36 -17 -31
-   58 sprites/gfx/uk.png 274 252 9 35 36 -17 -31
-   59 sprites/gfx/uk.png 311 252 9 35 36 -17 -31
-   60 sprites/gfx/uk.png 348 252 9 35 36 -17 -31
-   61 sprites/gfx/uk.png 385 252 9 35 36 -17 -31
-   62 sprites/gfx/uk.png 422 252 9 35 36 -17 -31
-   63 sprites/gfx/uk.png 459 252 9 35 36 -17 -31
-   64 sprites/gfx/uk.png 200 846 9 37 36 -17 -31	//UK Semaphore One-way Path Signal Red (04)
-   65 sprites/gfx/uk.png 237 846 9 37 36 -17 -31
-   66 sprites/gfx/uk.png 274 846 9 37 36 -17 -31
-   67 sprites/gfx/uk.png 311 846 9 37 36 -17 -31
-   68 sprites/gfx/uk.png 348 846 9 37 36 -17 -31
-   69 sprites/gfx/uk.png 385 846 9 37 36 -17 -31
-   70 sprites/gfx/uk.png 422 846 9 37 36 -17 -31
-   71 sprites/gfx/uk.png 459 846 9 37 36 -17 -31
-   72 sprites/gfx/uk.png 200 884 9 37 36 -17 -31	//UK Semaphore Path Signal Green (05)
-   73 sprites/gfx/uk.png 237 884 9 37 36 -17 -31
-   74 sprites/gfx/uk.png 274 884 9 37 36 -17 -31
-   75 sprites/gfx/uk.png 311 884 9 37 36 -17 -31
-   76 sprites/gfx/uk.png 348 884 9 37 36 -17 -31
-   77 sprites/gfx/uk.png 385 884 9 37 36 -17 -31
-   78 sprites/gfx/uk.png 422 884 9 37 36 -17 -31
-   79 sprites/gfx/uk.png 459 884 9 37 36 -17 -31
-   80 sprites/gfx/uk.png 200 108 9 35 20 -9 -30 //UK Electric Block Signal Red (06)
-   81 sprites/gfx/uk.png 221 108 9 35 20 -9 -30
-   82 sprites/gfx/uk.png 242 108 9 35 20 -9 -30
-   83 sprites/gfx/uk.png 263 108 9 35 20 -9 -30
-   84 sprites/gfx/uk.png 284 108 9 35 20 -9 -30
-   85 sprites/gfx/uk.png 305 108 9 35 20 -9 -30
-   86 sprites/gfx/uk.png 326 108 9 35 20 -9 -30
-   87 sprites/gfx/uk.png 347 108 9 35 20 -9 -30
-   88 sprites/gfx/uk.png 200 180 9 35 20 -9 -30 //UK Electric Block Signal Green (07)
-   89 sprites/gfx/uk.png 221 180 9 35 20 -9 -30
-   90 sprites/gfx/uk.png 242 180 9 35 20 -9 -30
-   91 sprites/gfx/uk.png 263 180 9 35 20 -9 -30
-   92 sprites/gfx/uk.png 284 180 9 35 20 -9 -30
-   93 sprites/gfx/uk.png 305 180 9 35 20 -9 -30
-   94 sprites/gfx/uk.png 326 180 9 35 20 -9 -30
-   95 sprites/gfx/uk.png 347 180 9 35 20 -9 -30
-   96 sprites/gfx/uk.png 200 648 9 35 20 -9 -30 //UK Electric Path Signal Red (08)
-   97 sprites/gfx/uk.png 221 648 9 35 20 -9 -30
-   98 sprites/gfx/uk.png 242 648 9 35 20 -9 -30
-   99 sprites/gfx/uk.png 263 648 9 35 20 -9 -30
-  100 sprites/gfx/uk.png 284 648 9 35 20 -9 -30
-  101 sprites/gfx/uk.png 305 648 9 35 20 -9 -30
-  102 sprites/gfx/uk.png 326 648 9 35 20 -9 -30
-  103 sprites/gfx/uk.png 347 648 9 35 20 -9 -30
-  104 sprites/gfx/uk.png 200 684 9 35 20 -9 -30 //UK Electric Path Signal Green (09)
-  105 sprites/gfx/uk.png 221 684 9 35 20 -9 -30
-  106 sprites/gfx/uk.png 242 684 9 35 20 -9 -30
-  107 sprites/gfx/uk.png 263 684 9 35 20 -9 -30
-  108 sprites/gfx/uk.png 284 684 9 35 20 -9 -30
-  109 sprites/gfx/uk.png 305 684 9 35 20 -9 -30
-  110 sprites/gfx/uk.png 326 684 9 35 20 -9 -30
-  111 sprites/gfx/uk.png 347 684 9 35 20 -9 -30
-  112 sprites/gfx/uk.png 00 720 9 35 20 -9 -30 //UK Electric One-way Path Signal Red (0A)
-  113 sprites/gfx/uk.png 21 720 9 35 20 -9 -30
-  114 sprites/gfx/uk.png 42 720 9 35 20 -9 -30
-  115 sprites/gfx/uk.png 63 720 9 35 20 -9 -30
-  116 sprites/gfx/uk.png 84 720 9 35 20 -9 -30
-  117 sprites/gfx/uk.png 105 720 9 35 20 -9 -30
-  118 sprites/gfx/uk.png 126 720 9 35 20 -9 -30
-  119 sprites/gfx/uk.png 147 720 9 35 20 -9 -30	
-  120 sprites/gfx/uk.png 00 756 9 35 20 -9 -30 //UK Electric One-way Path Signal Green (0B)
-  121 sprites/gfx/uk.png 21 756 9 35 20 -9 -30
-  122 sprites/gfx/uk.png 42 756 9 35 20 -9 -30
-  123 sprites/gfx/uk.png 63 756 9 35 20 -9 -30
-  124 sprites/gfx/uk.png 84 756 9 35 20 -9 -30
-  125 sprites/gfx/uk.png 105 756 9 35 20 -9 -30
-  126 sprites/gfx/uk.png 126 756 9 35 20 -9 -30
-  127 sprites/gfx/uk.png 147 756 9 35 20 -9 -30
-  128 sprites/gfx/uk.png 00 288 9 35 20 -9 -30	//UK Semaphore Block Signal III Red (00)
-  129 sprites/gfx/uk.png 21 288 9 35 20 -9 -30
-  130 sprites/gfx/uk.png 42 288 9 35 20 -9 -30
-  131 sprites/gfx/uk.png 63 288 9 35 20 -9 -30
-  132 sprites/gfx/uk.png 84 288 9 35 20 -9 -30
-  133 sprites/gfx/uk.png 105 288 9 35 20 -9 -30
-  134 sprites/gfx/uk.png 126 288 9 35 20 -9 -30
-  135 sprites/gfx/uk.png 147 288 9 35 20 -9 -30
-  136 sprites/gfx/uk.png 00 324 9 35 20 -9 -30	//UK Semaphore Block Signal III Yellow (01)
-  137 sprites/gfx/uk.png 21 324 9 35 20 -9 -30
-  138 sprites/gfx/uk.png 42 324 9 35 20 -9 -30
-  139 sprites/gfx/uk.png 63 324 9 35 20 -9 -30
-  140 sprites/gfx/uk.png 84 324 9 35 20 -9 -30
-  141 sprites/gfx/uk.png 105 324 9 35 20 -9 -30
-  142 sprites/gfx/uk.png 126 324 9 35 20 -9 -30
-  143 sprites/gfx/uk.png 147 324 9 35 20 -9 -30
-  144 sprites/gfx/uk.png 00 360 9 35 20 -9 -30	//UK Semaphore Block Signal III Green (02)
-  145 sprites/gfx/uk.png 21 360 9 35 20 -9 -30
-  146 sprites/gfx/uk.png 42 360 9 35 20 -9 -30
-  147 sprites/gfx/uk.png 63 360 9 35 20 -9 -30
-  148 sprites/gfx/uk.png 84 360 9 35 20 -9 -30
-  149 sprites/gfx/uk.png 105 360 9 35 20 -9 -30
-  150 sprites/gfx/uk.png 126 360 9 35 20 -9 -30
-  151 sprites/gfx/uk.png 147 360 9 35 20 -9 -30
-  152 sprites/gfx/uk.png 200 720 9 41 36 -17 -37	//UK Semaphore Path Signal III Red (03)
-  153 sprites/gfx/uk.png 237 720 9 41 36 -17 -37
-  154 sprites/gfx/uk.png 274 720 9 41 36 -17 -37
-  155 sprites/gfx/uk.png 311 720 9 41 36 -17 -37
-  156 sprites/gfx/uk.png 348 720 9 41 36 -17 -37
-  157 sprites/gfx/uk.png 385 720 9 41 36 -17 -37
-  158 sprites/gfx/uk.png 422 720 9 41 36 -17 -37
-  159 sprites/gfx/uk.png 459 720 9 41 36 -17 -37
-  160 sprites/gfx/uk.png 200 762 9 41 36 -17 -37	//UK Semaphore Path Signal III Yellow (04)
-  161 sprites/gfx/uk.png 237 762 9 41 36 -17 -37
-  162 sprites/gfx/uk.png 274 762 9 41 36 -17 -37
-  163 sprites/gfx/uk.png 311 762 9 41 36 -17 -37
-  164 sprites/gfx/uk.png 348 762 9 41 36 -17 -37
-  165 sprites/gfx/uk.png 385 762 9 41 36 -17 -37
-  166 sprites/gfx/uk.png 422 762 9 41 36 -17 -37
-  167 sprites/gfx/uk.png 459 762 9 41 36 -17 -37
-  168 sprites/gfx/uk.png 200 804 9 41 36 -17 -37	//UK Semaphore Path Signal III Green (05)
-  169 sprites/gfx/uk.png 237 804 9 41 36 -17 -37
-  170 sprites/gfx/uk.png 274 804 9 41 36 -17 -37
-  171 sprites/gfx/uk.png 311 804 9 41 36 -17 -37
-  172 sprites/gfx/uk.png 348 804 9 41 36 -17 -37
-  173 sprites/gfx/uk.png 385 804 9 41 36 -17 -37
-  174 sprites/gfx/uk.png 422 804 9 41 36 -17 -37
-  175 sprites/gfx/uk.png 459 804 9 41 36 -17 -37
-  176 sprites/gfx/uk.png 200 922 9 43 36 -17 -37	//UK Semaphore One-way Path Signal III Red (03)
-  177 sprites/gfx/uk.png 237 922 9 43 36 -17 -37
-  178 sprites/gfx/uk.png 274 922 9 43 36 -17 -37
-  179 sprites/gfx/uk.png 311 922 9 43 36 -17 -37
-  180 sprites/gfx/uk.png 348 922 9 43 36 -17 -37
-  181 sprites/gfx/uk.png 385 922 9 43 36 -17 -37
-  182 sprites/gfx/uk.png 422 922 9 43 36 -17 -37
-  183 sprites/gfx/uk.png 459 922 9 43 36 -17 -37
-  184 sprites/gfx/uk.png 200 966 9 43 36 -17 -37	//UK Semaphore One-way Path Signal III Yellow (04)
-  185 sprites/gfx/uk.png 237 966 9 43 36 -17 -37
-  186 sprites/gfx/uk.png 274 966 9 43 36 -17 -37
-  187 sprites/gfx/uk.png 311 966 9 43 36 -17 -37
-  188 sprites/gfx/uk.png 348 966 9 43 36 -17 -37
-  189 sprites/gfx/uk.png 385 966 9 43 36 -17 -37
-  190 sprites/gfx/uk.png 422 966 9 43 36 -17 -37
-  191 sprites/gfx/uk.png 459 966 9 43 36 -17 -37
-  192 sprites/gfx/uk.png 200 1010 9 43 36 -17 -36	//UK Semaphore One-way Path Signal III Green (05)
-  193 sprites/gfx/uk.png 237 1010 9 43 36 -17 -36
-  194 sprites/gfx/uk.png 274 1010 9 43 36 -17 -36
-  195 sprites/gfx/uk.png 311 1010 9 43 36 -17 -36
-  196 sprites/gfx/uk.png 348 1010 9 43 36 -17 -36
-  197 sprites/gfx/uk.png 385 1010 9 43 36 -17 -36
-  198 sprites/gfx/uk.png 422 1010 9 43 36 -17 -36
-  199 sprites/gfx/uk.png 459 1010 9 43 36 -17 -36
-  200 sprites/gfx/uk.png 200 00 9 35 20 -9 -30 //UK Electric Block Signal III Red (09)
-  201 sprites/gfx/uk.png 221 00 9 35 20 -9 -30
-  202 sprites/gfx/uk.png 242 00 9 35 20 -9 -30
-  203 sprites/gfx/uk.png 263 00 9 35 20 -9 -30
-  204 sprites/gfx/uk.png 284 00 9 35 20 -9 -30
-  205 sprites/gfx/uk.png 305 00 9 35 20 -9 -30
-  206 sprites/gfx/uk.png 326 00 9 35 20 -9 -30
-  207 sprites/gfx/uk.png 347 00 9 35 20 -9 -30	
-  208 sprites/gfx/uk.png 200 36 9 35 20 -9 -30 //UK Electric Block Signal III Yellow (0A)
-  209 sprites/gfx/uk.png 221 36 9 35 20 -9 -30
-  210 sprites/gfx/uk.png 242 36 9 35 20 -9 -30
-  211 sprites/gfx/uk.png 263 36 9 35 20 -9 -30
-  212 sprites/gfx/uk.png 284 36 9 35 20 -9 -30
-  213 sprites/gfx/uk.png 305 36 9 35 20 -9 -30
-  214 sprites/gfx/uk.png 326 36 9 35 20 -9 -30
-  215 sprites/gfx/uk.png 347 36 9 35 20 -9 -30
-  216 sprites/gfx/uk.png 200 72 9 35 20 -9 -30 //UK Electric Block Signal III Green (0B)
-  217 sprites/gfx/uk.png 221 72 9 35 20 -9 -30
-  218 sprites/gfx/uk.png 242 72 9 35 20 -9 -30
-  219 sprites/gfx/uk.png 263 72 9 35 20 -9 -30
-  220 sprites/gfx/uk.png 284 72 9 35 20 -9 -30
-  221 sprites/gfx/uk.png 305 72 9 35 20 -9 -30
-  222 sprites/gfx/uk.png 326 72 9 35 20 -9 -30
-  223 sprites/gfx/uk.png 347 72 9 35 20 -9 -30
-  224 sprites/gfx/uk.png 200 540 9 35 20 -9 -30 //UK Electric Path Signal III Red (0C)
-  225 sprites/gfx/uk.png 221 540 9 35 20 -9 -30
-  226 sprites/gfx/uk.png 242 540 9 35 20 -9 -30
-  227 sprites/gfx/uk.png 263 540 9 35 20 -9 -30
-  228 sprites/gfx/uk.png 284 540 9 35 20 -9 -30
-  229 sprites/gfx/uk.png 305 540 9 35 20 -9 -30
-  230 sprites/gfx/uk.png 326 540 9 35 20 -9 -30
-  231 sprites/gfx/uk.png 347 540 9 35 20 -9 -30  
-  232 sprites/gfx/uk.png 200 576 9 35 20 -9 -30 //UK Electric Path Signal III Yellow (0D)
-  233 sprites/gfx/uk.png 221 576 9 35 20 -9 -30
-  234 sprites/gfx/uk.png 242 576 9 35 20 -9 -30
-  235 sprites/gfx/uk.png 263 576 9 35 20 -9 -30
-  236 sprites/gfx/uk.png 284 576 9 35 20 -9 -30
-  237 sprites/gfx/uk.png 305 576 9 35 20 -9 -30
-  238 sprites/gfx/uk.png 326 576 9 35 20 -9 -30
-  239 sprites/gfx/uk.png 347 576 9 35 20 -9 -30
-  240 sprites/gfx/uk.png 200 612 9 35 20 -9 -30 //UK Electric Path Signal III Green (0E)
-  241 sprites/gfx/uk.png 221 612 9 35 20 -9 -30
-  242 sprites/gfx/uk.png 242 612 9 35 20 -9 -30
-  243 sprites/gfx/uk.png 263 612 9 35 20 -9 -30
-  244 sprites/gfx/uk.png 284 612 9 35 20 -9 -30
-  245 sprites/gfx/uk.png 305 612 9 35 20 -9 -30
-  246 sprites/gfx/uk.png 326 612 9 35 20 -9 -30
-  247 sprites/gfx/uk.png 347 612 9 35 20 -9 -30
-  248 sprites/gfx/uk.png 00 612 9 35 20 -9 -30 //UK Electric One-way Path Signal III Red (0F)
-  249 sprites/gfx/uk.png 21 612 9 35 20 -9 -30
-  250 sprites/gfx/uk.png 42 612 9 35 20 -9 -30
-  251 sprites/gfx/uk.png 63 612 9 35 20 -9 -30
-  252 sprites/gfx/uk.png 84 612 9 35 20 -9 -30
-  253 sprites/gfx/uk.png 105 612 9 35 20 -9 -30
-  254 sprites/gfx/uk.png 126 612 9 35 20 -9 -30
-  255 sprites/gfx/uk.png 147 612 9 35 20 -9 -30	
-  256 sprites/gfx/uk.png 00 648 9 35 20 -9 -30 //UK Electric One-way Path Signal III Yellow (10)
-  257 sprites/gfx/uk.png 21 648 9 35 20 -9 -30
-  258 sprites/gfx/uk.png 42 648 9 35 20 -9 -30
-  259 sprites/gfx/uk.png 63 648 9 35 20 -9 -30
-  260 sprites/gfx/uk.png 84 648 9 35 20 -9 -30
-  261 sprites/gfx/uk.png 105 648 9 35 20 -9 -30
-  262 sprites/gfx/uk.png 126 648 9 35 20 -9 -30
-  263 sprites/gfx/uk.png 147 648 9 35 20 -9 -30	
-  264 sprites/gfx/uk.png 00 684 9 35 20 -9 -30 //UK Electric One-way Path Signal III Green (11)
-  265 sprites/gfx/uk.png 21 684 9 35 20 -9 -30
-  266 sprites/gfx/uk.png 42 684 9 35 20 -9 -30
-  267 sprites/gfx/uk.png 63 684 9 35 20 -9 -30
-  268 sprites/gfx/uk.png 84 684 9 35 20 -9 -30
-  269 sprites/gfx/uk.png 105 684 9 35 20 -9 -30
-  270 sprites/gfx/uk.png 126 684 9 35 20 -9 -30
-  271 sprites/gfx/uk.png 147 684 9 35 20 -9 -30	
-  272 sprites/gfx/uk.png 00 72 9 35 20 -9 -30	//UK Electric Block Signal IV Red (00)
-  273 sprites/gfx/uk.png 21 72 9 35 20 -9 -30
-  274 sprites/gfx/uk.png 42 72 9 35 20 -9 -30
-  275 sprites/gfx/uk.png 63 72 9 35 20 -9 -30
-  276 sprites/gfx/uk.png 84 72 9 35 20 -9 -30
-  277 sprites/gfx/uk.png 105 72 9 35 20 -9 -30
-  278 sprites/gfx/uk.png 126 72 9 35 20 -9 -30
-  279 sprites/gfx/uk.png 147 72 9 35 20 -9 -30
-  280 sprites/gfx/uk.png 00 108 9 35 20 -9 -30	//UK Electric Block Signal IV Yellow (01)
-  281 sprites/gfx/uk.png 21 108 9 35 20 -9 -30
-  282 sprites/gfx/uk.png 42 108 9 35 20 -9 -30
-  283 sprites/gfx/uk.png 63 108 9 35 20 -9 -30
-  284 sprites/gfx/uk.png 84 108 9 35 20 -9 -30
-  285 sprites/gfx/uk.png 105 108 9 35 20 -9 -30
-  286 sprites/gfx/uk.png 126 108 9 35 20 -9 -30
-  287 sprites/gfx/uk.png 147 108 9 35 20 -9 -30
-  288 sprites/gfx/uk.png 00 144 9 35 20 -9 -30	//UK Electric Block Signal IV Double Yellow (02)
-  289 sprites/gfx/uk.png 21 144 9 35 20 -9 -30
-  290 sprites/gfx/uk.png 42 144 9 35 20 -9 -30
-  291 sprites/gfx/uk.png 63 144 9 35 20 -9 -30
-  292 sprites/gfx/uk.png 84 144 9 35 20 -9 -30
-  293 sprites/gfx/uk.png 105 144 9 35 20 -9 -30
-  294 sprites/gfx/uk.png 126 144 9 35 20 -9 -30
-  295 sprites/gfx/uk.png 147 144 9 35 20 -9 -30
-  296 sprites/gfx/uk.png 00 180 9 35 20 -9 -30	//UK Electric Block Signal IV Green (03)
-  297 sprites/gfx/uk.png 21 180 9 35 20 -9 -30
-  298 sprites/gfx/uk.png 42 180 9 35 20 -9 -30
-  299 sprites/gfx/uk.png 63 180 9 35 20 -9 -30
-  300 sprites/gfx/uk.png 84 180 9 35 20 -9 -30
-  301 sprites/gfx/uk.png 105 180 9 35 20 -9 -30
-  302 sprites/gfx/uk.png 126 180 9 35 20 -9 -30
-  303 sprites/gfx/uk.png 147 180 9 35 20 -9 -30
-  304 sprites/gfx/uk.png 200 396 9 35 20 -9 -30	//UK Electric Path Signal IV Red (04)
-  305 sprites/gfx/uk.png 221 396 9 35 20 -9 -30
-  306 sprites/gfx/uk.png 242 396 9 35 20 -9 -30
-  307 sprites/gfx/uk.png 263 396 9 35 20 -9 -30
-  308 sprites/gfx/uk.png 284 396 9 35 20 -9 -30
-  309 sprites/gfx/uk.png 305 396 9 35 20 -9 -30
-  310 sprites/gfx/uk.png 326 396 9 35 20 -9 -30
-  311 sprites/gfx/uk.png 347 396 9 35 20 -9 -30
-  312 sprites/gfx/uk.png 200 432 9 35 20 -9 -30	//UK Electric Path Signal IV Red (05)
-  313 sprites/gfx/uk.png 221 432 9 35 20 -9 -30
-  314 sprites/gfx/uk.png 242 432 9 35 20 -9 -30
-  315 sprites/gfx/uk.png 263 432 9 35 20 -9 -30
-  316 sprites/gfx/uk.png 284 432 9 35 20 -9 -30
-  317 sprites/gfx/uk.png 305 432 9 35 20 -9 -30
-  318 sprites/gfx/uk.png 326 432 9 35 20 -9 -30
-  319 sprites/gfx/uk.png 347 432 9 35 20 -9 -30
-  320 sprites/gfx/uk.png 200 468 9 35 20 -9 -30	//UK Electric Path Signal IV Red (06)
-  321 sprites/gfx/uk.png 221 468 9 35 20 -9 -30
-  322 sprites/gfx/uk.png 242 468 9 35 20 -9 -30
-  323 sprites/gfx/uk.png 263 468 9 35 20 -9 -30
-  324 sprites/gfx/uk.png 284 468 9 35 20 -9 -30
-  325 sprites/gfx/uk.png 305 468 9 35 20 -9 -30
-  326 sprites/gfx/uk.png 326 468 9 35 20 -9 -30
-  327 sprites/gfx/uk.png 347 468 9 35 20 -9 -30  
-  328 sprites/gfx/uk.png 200 504 9 35 20 -9 -30	//UK Electric Path Signal IV Red (07)
-  329 sprites/gfx/uk.png 221 504 9 35 20 -9 -30
-  330 sprites/gfx/uk.png 242 504 9 35 20 -9 -30
-  331 sprites/gfx/uk.png 263 504 9 35 20 -9 -30
-  332 sprites/gfx/uk.png 284 504 9 35 20 -9 -30
-  333 sprites/gfx/uk.png 305 504 9 35 20 -9 -30
-  334 sprites/gfx/uk.png 326 504 9 35 20 -9 -30
-  335 sprites/gfx/uk.png 347 504 9 35 20 -9 -30  
-  336 sprites/gfx/uk.png 00 468 9 35 20 -9 -30	//UK Electric One-way Path Signal IV Red (08)
-  337 sprites/gfx/uk.png 21 468 9 35 20 -9 -30
-  338 sprites/gfx/uk.png 42 468 9 35 20 -9 -30
-  339 sprites/gfx/uk.png 63 468 9 35 20 -9 -30
-  340 sprites/gfx/uk.png 84 468 9 35 20 -9 -30
-  341 sprites/gfx/uk.png 105 468 9 35 20 -9 -30
-  342 sprites/gfx/uk.png 126 468 9 35 20 -9 -30
-  343 sprites/gfx/uk.png 147 468 9 35 20 -9 -30  
-  344 sprites/gfx/uk.png 00 504 9 35 20 -9 -30	//UK Electric One-way Path Signal IV Yellow (09)
-  345 sprites/gfx/uk.png 21 504 9 35 20 -9 -30
-  346 sprites/gfx/uk.png 42 504 9 35 20 -9 -30
-  347 sprites/gfx/uk.png 63 504 9 35 20 -9 -30
-  348 sprites/gfx/uk.png 84 504 9 35 20 -9 -30
-  349 sprites/gfx/uk.png 105 504 9 35 20 -9 -30
-  350 sprites/gfx/uk.png 126 504 9 35 20 -9 -30
-  351 sprites/gfx/uk.png 147 504 9 35 20 -9 -30  
-  352 sprites/gfx/uk.png 00 540 9 35 20 -9 -30	//UK Electric One-way Path Signal IV 2 Yellow (0A)
-  353 sprites/gfx/uk.png 21 540 9 35 20 -9 -30
-  354 sprites/gfx/uk.png 42 540 9 35 20 -9 -30
-  355 sprites/gfx/uk.png 63 540 9 35 20 -9 -30
-  356 sprites/gfx/uk.png 84 540 9 35 20 -9 -30
-  357 sprites/gfx/uk.png 105 540 9 35 20 -9 -30
-  358 sprites/gfx/uk.png 126 540 9 35 20 -9 -30
-  359 sprites/gfx/uk.png 147 540 9 35 20 -9 -30  
-  360 sprites/gfx/uk.png 00 576 9 35 20 -9 -30	//UK Electric One-way Path Signal IV Green (0B)
-  361 sprites/gfx/uk.png 21 576 9 35 20 -9 -30
-  362 sprites/gfx/uk.png 42 576 9 35 20 -9 -30
-  363 sprites/gfx/uk.png 63 576 9 35 20 -9 -30
-  364 sprites/gfx/uk.png 84 576 9 35 20 -9 -30
-  365 sprites/gfx/uk.png 105 576 9 35 20 -9 -30
-  366 sprites/gfx/uk.png 126 576 9 35 20 -9 -30
-  367 sprites/gfx/uk.png 147 576 9 35 20 -9 -30
-  368 sprites/gfx/uk.png 00 216 9 35 20 -9 -30	//UK Semaphore Block Repeater Yellow (00)
-  369 sprites/gfx/uk.png 21 216 9 35 20 -9 -30
-  370 sprites/gfx/uk.png 42 216 9 35 20 -9 -30
-  371 sprites/gfx/uk.png 63 216 9 35 20 -9 -30
-  372 sprites/gfx/uk.png 84 216 9 35 20 -9 -30
-  373 sprites/gfx/uk.png 105 216 9 35 20 -9 -30
-  374 sprites/gfx/uk.png 126 216 9 35 20 -9 -30
-  375 sprites/gfx/uk.png 147 216 9 35 20 -9 -30
-  376 sprites/gfx/uk.png 00 252 9 35 20 -9 -30	//UK Semaphore Block Repeater Green (01)
-  377 sprites/gfx/uk.png 21 252 9 35 20 -9 -30
-  378 sprites/gfx/uk.png 42 252 9 35 20 -9 -30
-  379 sprites/gfx/uk.png 63 252 9 35 20 -9 -30
-  380 sprites/gfx/uk.png 84 252 9 35 20 -9 -30
-  381 sprites/gfx/uk.png 105 252 9 35 20 -9 -30
-  382 sprites/gfx/uk.png 126 252 9 35 20 -9 -30
-  383 sprites/gfx/uk.png 147 252 9 35 20 -9 -30
-  384 sprites/gfx/uk.png 200 288 9 35 36 -17 -31	//UK Semaphore Path Repeater Yellow (02)
-  385 sprites/gfx/uk.png 237 288 9 35 36 -17 -31
-  386 sprites/gfx/uk.png 274 288 9 35 36 -17 -31
-  387 sprites/gfx/uk.png 311 288 9 35 36 -17 -31
-  388 sprites/gfx/uk.png 348 288 9 35 36 -17 -31
-  389 sprites/gfx/uk.png 385 288 9 35 36 -17 -31
-  390 sprites/gfx/uk.png 422 288 9 35 36 -17 -31
-  391 sprites/gfx/uk.png 459 288 9 35 36 -17 -31
-  392 sprites/gfx/uk.png 200 324 9 35 36 -17 -31	//UK Semaphore Path Repeater Green (03)
-  393 sprites/gfx/uk.png 237 324 9 35 36 -17 -31
-  394 sprites/gfx/uk.png 274 324 9 35 36 -17 -31
-  395 sprites/gfx/uk.png 311 324 9 35 36 -17 -31
-  396 sprites/gfx/uk.png 348 324 9 35 36 -17 -31
-  397 sprites/gfx/uk.png 385 324 9 35 36 -17 -31
-  398 sprites/gfx/uk.png 422 324 9 35 36 -17 -31
-  399 sprites/gfx/uk.png 459 324 9 35 36 -17 -31
-  400 sprites/gfx/uk.png 200 144 9 35 20 -9 -30 //UK Electric Block Repeater Yellow (04)
-  401 sprites/gfx/uk.png 221 144 9 35 20 -9 -30
-  402 sprites/gfx/uk.png 242 144 9 35 20 -9 -30
-  403 sprites/gfx/uk.png 263 144 9 35 20 -9 -30
-  404 sprites/gfx/uk.png 284 144 9 35 20 -9 -30
-  405 sprites/gfx/uk.png 305 144 9 35 20 -9 -30
-  406 sprites/gfx/uk.png 326 144 9 35 20 -9 -30
-  407 sprites/gfx/uk.png 347 144 9 35 20 -9 -30
-  408 sprites/gfx/uk.png 200 180 9 35 20 -9 -30 //UK Electric Block Repeater Green (05)
-  409 sprites/gfx/uk.png 221 180 9 35 20 -9 -30
-  410 sprites/gfx/uk.png 242 180 9 35 20 -9 -30
-  411 sprites/gfx/uk.png 263 180 9 35 20 -9 -30
-  412 sprites/gfx/uk.png 284 180 9 35 20 -9 -30
-  413 sprites/gfx/uk.png 305 180 9 35 20 -9 -30
-  414 sprites/gfx/uk.png 326 180 9 35 20 -9 -30
-  415 sprites/gfx/uk.png 347 180 9 35 20 -9 -30
-  416 sprites/gfx/uk.png 00 396 9 35 20 -9 -30	//UK Electric Repeater On (06)
-  417 sprites/gfx/uk.png 21 396 9 35 20 -9 -30
-  418 sprites/gfx/uk.png 42 396 9 35 20 -9 -30
-  419 sprites/gfx/uk.png 63 396 9 35 20 -9 -30
-  420 sprites/gfx/uk.png 84 396 9 35 20 -9 -30
-  421 sprites/gfx/uk.png 105 396 9 35 20 -9 -30
-  422 sprites/gfx/uk.png 126 396 9 35 20 -9 -30
-  423 sprites/gfx/uk.png 147 396 9 35 20 -9 -30
-  424 sprites/gfx/uk.png 00 432 9 35 20 -9 -30	//UK Electric Repeater Off (07)
-  425 sprites/gfx/uk.png 21 432 9 35 20 -9 -30
-  426 sprites/gfx/uk.png 42 432 9 35 20 -9 -30
-  427 sprites/gfx/uk.png 63 432 9 35 20 -9 -30
-  428 sprites/gfx/uk.png 84 432 9 35 20 -9 -30
-  429 sprites/gfx/uk.png 105 432 9 35 20 -9 -30
-  430 sprites/gfx/uk.png 126 432 9 35 20 -9 -30
-  431 sprites/gfx/uk.png 147 432 9 35 20 -9 -30
-  432 sprites/gfx/uk.png 00 864 9 35 20 -9 -30	//UK Semaphore Shunt Off (00)
-  433 sprites/gfx/uk.png 21 864 9 35 20 -9 -30
-  434 sprites/gfx/uk.png 42 864 9 35 20 -9 -30
-  435 sprites/gfx/uk.png 63 864 9 35 20 -9 -30
-  436 sprites/gfx/uk.png 84 864 9 35 20 -9 -30
-  437 sprites/gfx/uk.png 105 864 9 35 20 -9 -30
-  438 sprites/gfx/uk.png 126 864 9 35 20 -9 -30
-  439 sprites/gfx/uk.png 147 864 9 35 20 -9 -30
-  440 sprites/gfx/uk.png 00 900 9 35 20 -9 -30	//UK Semaphore Shunt on (01)
-  441 sprites/gfx/uk.png 21 900 9 35 20 -9 -30
-  442 sprites/gfx/uk.png 42 900 9 35 20 -9 -30
-  443 sprites/gfx/uk.png 63 900 9 35 20 -9 -30
-  444 sprites/gfx/uk.png 84 900 9 35 20 -9 -30
-  445 sprites/gfx/uk.png 105 900 9 35 20 -9 -30
-  446 sprites/gfx/uk.png 126 900 9 35 20 -9 -30
-  447 sprites/gfx/uk.png 147 900 9 35 20 -9 -30
-  448 sprites/gfx/uk.png 00 792 9 35 20 -9 -30	//UK Electric Shunt off (02)
-  449 sprites/gfx/uk.png 21 792 9 35 20 -9 -30
-  450 sprites/gfx/uk.png 42 792 9 35 20 -9 -30
-  451 sprites/gfx/uk.png 63 792 9 35 20 -9 -30
-  452 sprites/gfx/uk.png 84 792 9 35 20 -9 -30
-  453 sprites/gfx/uk.png 105 792 9 35 20 -9 -30
-  454 sprites/gfx/uk.png 126 792 9 35 20 -9 -30
-  455 sprites/gfx/uk.png 147 792 9 35 20 -9 -30
-  456 sprites/gfx/uk.png 00 828 9 35 20 -9 -30	//UK Electric Shunt on (03)
-  457 sprites/gfx/uk.png 21 828 9 35 20 -9 -30
-  458 sprites/gfx/uk.png 42 828 9 35 20 -9 -30
-  459 sprites/gfx/uk.png 63 828 9 35 20 -9 -30
-  460 sprites/gfx/uk.png 84 828 9 35 20 -9 -30
-  461 sprites/gfx/uk.png 105 828 9 35 20 -9 -30
-  462 sprites/gfx/uk.png 126 828 9 35 20 -9 -30
-  463 sprites/gfx/uk.png 147 828 9 35 20 -9 -30
+   30 sprites/gfx/uk.png 00 00 9 35 20 -9 -30	//UK Semaphore Block Signal Red (00)
+   31 sprites/gfx/uk.png 21 00 9 35 20 -9 -30
+   32 sprites/gfx/uk.png 42 00 9 35 20 -9 -30
+   33 sprites/gfx/uk.png 63 00 9 35 20 -9 -30
+   34 sprites/gfx/uk.png 84 00 9 35 20 -9 -30
+   35 sprites/gfx/uk.png 105 00 9 35 20 -9 -30
+   36 sprites/gfx/uk.png 126 00 9 35 20 -9 -30
+   37 sprites/gfx/uk.png 147 00 9 35 20 -9 -30	
+   38 sprites/gfx/uk.png 00 36 9 35 20 -9 -30	//UK Semaphore Block Signal Green (01)
+   39 sprites/gfx/uk.png 21 36 9 35 20 -9 -30
+   40 sprites/gfx/uk.png 42 36 9 35 20 -9 -30
+   41 sprites/gfx/uk.png 63 36 9 35 20 -9 -30
+   42 sprites/gfx/uk.png 84 36 9 35 20 -9 -30
+   43 sprites/gfx/uk.png 105 36 9 35 20 -9 -30
+   44 sprites/gfx/uk.png 126 36 9 35 20 -9 -30
+   45 sprites/gfx/uk.png 147 36 9 35 20 -9 -30
+   46 sprites/gfx/uk.png 200 216 9 35 36 -17 -31	//UK Semaphore Path Signal Red (02)
+   47 sprites/gfx/uk.png 237 216 9 35 36 -17 -31
+   48 sprites/gfx/uk.png 274 216 9 35 36 -17 -31
+   49 sprites/gfx/uk.png 311 216 9 35 36 -17 -31
+   50 sprites/gfx/uk.png 348 216 9 35 36 -17 -31
+   51 sprites/gfx/uk.png 385 216 9 35 36 -17 -31
+   52 sprites/gfx/uk.png 422 216 9 35 36 -17 -31
+   53 sprites/gfx/uk.png 459 216 9 35 36 -17 -31
+   54 sprites/gfx/uk.png 200 252 9 35 36 -17 -31	//UK Semaphore Path Signal Green (03)
+   55 sprites/gfx/uk.png 237 252 9 35 36 -17 -31
+   56 sprites/gfx/uk.png 274 252 9 35 36 -17 -31
+   57 sprites/gfx/uk.png 311 252 9 35 36 -17 -31
+   58 sprites/gfx/uk.png 348 252 9 35 36 -17 -31
+   59 sprites/gfx/uk.png 385 252 9 35 36 -17 -31
+   60 sprites/gfx/uk.png 422 252 9 35 36 -17 -31
+   61 sprites/gfx/uk.png 459 252 9 35 36 -17 -31
+   62 sprites/gfx/uk.png 200 846 9 37 36 -17 -31	//UK Semaphore One-way Path Signal Red (04)
+   63 sprites/gfx/uk.png 237 846 9 37 36 -17 -31
+   64 sprites/gfx/uk.png 274 846 9 37 36 -17 -31
+   65 sprites/gfx/uk.png 311 846 9 37 36 -17 -31
+   66 sprites/gfx/uk.png 348 846 9 37 36 -17 -31
+   67 sprites/gfx/uk.png 385 846 9 37 36 -17 -31
+   68 sprites/gfx/uk.png 422 846 9 37 36 -17 -31
+   69 sprites/gfx/uk.png 459 846 9 37 36 -17 -31
+   70 sprites/gfx/uk.png 200 884 9 37 36 -17 -31	//UK Semaphore Path Signal Green (05)
+   71 sprites/gfx/uk.png 237 884 9 37 36 -17 -31
+   72 sprites/gfx/uk.png 274 884 9 37 36 -17 -31
+   73 sprites/gfx/uk.png 311 884 9 37 36 -17 -31
+   74 sprites/gfx/uk.png 348 884 9 37 36 -17 -31
+   75 sprites/gfx/uk.png 385 884 9 37 36 -17 -31
+   76 sprites/gfx/uk.png 422 884 9 37 36 -17 -31
+   77 sprites/gfx/uk.png 459 884 9 37 36 -17 -31
+   78 sprites/gfx/uk.png 200 108 9 35 20 -9 -30 //UK Electric Block Signal Red (06)
+   79 sprites/gfx/uk.png 221 108 9 35 20 -9 -30
+   80 sprites/gfx/uk.png 242 108 9 35 20 -9 -30
+   81 sprites/gfx/uk.png 263 108 9 35 20 -9 -30
+   82 sprites/gfx/uk.png 284 108 9 35 20 -9 -30
+   83 sprites/gfx/uk.png 305 108 9 35 20 -9 -30
+   84 sprites/gfx/uk.png 326 108 9 35 20 -9 -30
+   85 sprites/gfx/uk.png 347 108 9 35 20 -9 -30
+   86 sprites/gfx/uk.png 200 180 9 35 20 -9 -30 //UK Electric Block Signal Green (07)
+   87 sprites/gfx/uk.png 221 180 9 35 20 -9 -30
+   88 sprites/gfx/uk.png 242 180 9 35 20 -9 -30
+   89 sprites/gfx/uk.png 263 180 9 35 20 -9 -30
+   90 sprites/gfx/uk.png 284 180 9 35 20 -9 -30
+   91 sprites/gfx/uk.png 305 180 9 35 20 -9 -30
+   92 sprites/gfx/uk.png 326 180 9 35 20 -9 -30
+   93 sprites/gfx/uk.png 347 180 9 35 20 -9 -30
+   94 sprites/gfx/uk.png 200 648 9 35 20 -9 -30 //UK Electric Path Signal Red (08)
+   95 sprites/gfx/uk.png 221 648 9 35 20 -9 -30
+   96 sprites/gfx/uk.png 242 648 9 35 20 -9 -30
+   97 sprites/gfx/uk.png 263 648 9 35 20 -9 -30
+   98 sprites/gfx/uk.png 284 648 9 35 20 -9 -30
+   99 sprites/gfx/uk.png 305 648 9 35 20 -9 -30
+  100 sprites/gfx/uk.png 326 648 9 35 20 -9 -30
+  101 sprites/gfx/uk.png 347 648 9 35 20 -9 -30
+  102 sprites/gfx/uk.png 200 684 9 35 20 -9 -30 //UK Electric Path Signal Green (09)
+  103 sprites/gfx/uk.png 221 684 9 35 20 -9 -30
+  104 sprites/gfx/uk.png 242 684 9 35 20 -9 -30
+  105 sprites/gfx/uk.png 263 684 9 35 20 -9 -30
+  106 sprites/gfx/uk.png 284 684 9 35 20 -9 -30
+  107 sprites/gfx/uk.png 305 684 9 35 20 -9 -30
+  108 sprites/gfx/uk.png 326 684 9 35 20 -9 -30
+  109 sprites/gfx/uk.png 347 684 9 35 20 -9 -30
+  110 sprites/gfx/uk.png 00 720 9 35 20 -9 -30 //UK Electric One-way Path Signal Red (0A)
+  111 sprites/gfx/uk.png 21 720 9 35 20 -9 -30
+  112 sprites/gfx/uk.png 42 720 9 35 20 -9 -30
+  113 sprites/gfx/uk.png 63 720 9 35 20 -9 -30
+  114 sprites/gfx/uk.png 84 720 9 35 20 -9 -30
+  115 sprites/gfx/uk.png 105 720 9 35 20 -9 -30
+  116 sprites/gfx/uk.png 126 720 9 35 20 -9 -30
+  117 sprites/gfx/uk.png 147 720 9 35 20 -9 -30	
+  118 sprites/gfx/uk.png 00 756 9 35 20 -9 -30 //UK Electric One-way Path Signal Green (0B)
+  119 sprites/gfx/uk.png 21 756 9 35 20 -9 -30
+  120 sprites/gfx/uk.png 42 756 9 35 20 -9 -30
+  121 sprites/gfx/uk.png 63 756 9 35 20 -9 -30
+  122 sprites/gfx/uk.png 84 756 9 35 20 -9 -30
+  123 sprites/gfx/uk.png 105 756 9 35 20 -9 -30
+  124 sprites/gfx/uk.png 126 756 9 35 20 -9 -30
+  125 sprites/gfx/uk.png 147 756 9 35 20 -9 -30
+  126 sprites/gfx/uk.png 00 288 9 35 20 -9 -30	//UK Semaphore Block Signal III Red (00)
+  127 sprites/gfx/uk.png 21 288 9 35 20 -9 -30
+  128 sprites/gfx/uk.png 42 288 9 35 20 -9 -30
+  129 sprites/gfx/uk.png 63 288 9 35 20 -9 -30
+  130 sprites/gfx/uk.png 84 288 9 35 20 -9 -30
+  131 sprites/gfx/uk.png 105 288 9 35 20 -9 -30
+  132 sprites/gfx/uk.png 126 288 9 35 20 -9 -30
+  133 sprites/gfx/uk.png 147 288 9 35 20 -9 -30
+  134 sprites/gfx/uk.png 00 324 9 35 20 -9 -30	//UK Semaphore Block Signal III Yellow (01)
+  135 sprites/gfx/uk.png 21 324 9 35 20 -9 -30
+  136 sprites/gfx/uk.png 42 324 9 35 20 -9 -30
+  137 sprites/gfx/uk.png 63 324 9 35 20 -9 -30
+  138 sprites/gfx/uk.png 84 324 9 35 20 -9 -30
+  139 sprites/gfx/uk.png 105 324 9 35 20 -9 -30
+  140 sprites/gfx/uk.png 126 324 9 35 20 -9 -30
+  141 sprites/gfx/uk.png 147 324 9 35 20 -9 -30
+  142 sprites/gfx/uk.png 00 360 9 35 20 -9 -30	//UK Semaphore Block Signal III Green (02)
+  143 sprites/gfx/uk.png 21 360 9 35 20 -9 -30
+  144 sprites/gfx/uk.png 42 360 9 35 20 -9 -30
+  145 sprites/gfx/uk.png 63 360 9 35 20 -9 -30
+  146 sprites/gfx/uk.png 84 360 9 35 20 -9 -30
+  147 sprites/gfx/uk.png 105 360 9 35 20 -9 -30
+  148 sprites/gfx/uk.png 126 360 9 35 20 -9 -30
+  149 sprites/gfx/uk.png 147 360 9 35 20 -9 -30
+  150 sprites/gfx/uk.png 200 720 9 41 36 -17 -37	//UK Semaphore Path Signal III Red (03)
+  151 sprites/gfx/uk.png 237 720 9 41 36 -17 -37
+  152 sprites/gfx/uk.png 274 720 9 41 36 -17 -37
+  153 sprites/gfx/uk.png 311 720 9 41 36 -17 -37
+  154 sprites/gfx/uk.png 348 720 9 41 36 -17 -37
+  155 sprites/gfx/uk.png 385 720 9 41 36 -17 -37
+  156 sprites/gfx/uk.png 422 720 9 41 36 -17 -37
+  157 sprites/gfx/uk.png 459 720 9 41 36 -17 -37
+  158 sprites/gfx/uk.png 200 762 9 41 36 -17 -37	//UK Semaphore Path Signal III Yellow (04)
+  159 sprites/gfx/uk.png 237 762 9 41 36 -17 -37
+  160 sprites/gfx/uk.png 274 762 9 41 36 -17 -37
+  161 sprites/gfx/uk.png 311 762 9 41 36 -17 -37
+  162 sprites/gfx/uk.png 348 762 9 41 36 -17 -37
+  163 sprites/gfx/uk.png 385 762 9 41 36 -17 -37
+  164 sprites/gfx/uk.png 422 762 9 41 36 -17 -37
+  165 sprites/gfx/uk.png 459 762 9 41 36 -17 -37
+  166 sprites/gfx/uk.png 200 804 9 41 36 -17 -37	//UK Semaphore Path Signal III Green (05)
+  167 sprites/gfx/uk.png 237 804 9 41 36 -17 -37
+  168 sprites/gfx/uk.png 274 804 9 41 36 -17 -37
+  169 sprites/gfx/uk.png 311 804 9 41 36 -17 -37
+  170 sprites/gfx/uk.png 348 804 9 41 36 -17 -37
+  171 sprites/gfx/uk.png 385 804 9 41 36 -17 -37
+  172 sprites/gfx/uk.png 422 804 9 41 36 -17 -37
+  173 sprites/gfx/uk.png 459 804 9 41 36 -17 -37
+  174 sprites/gfx/uk.png 200 922 9 43 36 -17 -37	//UK Semaphore One-way Path Signal III Red (03)
+  175 sprites/gfx/uk.png 237 922 9 43 36 -17 -37
+  176 sprites/gfx/uk.png 274 922 9 43 36 -17 -37
+  177 sprites/gfx/uk.png 311 922 9 43 36 -17 -37
+  178 sprites/gfx/uk.png 348 922 9 43 36 -17 -37
+  179 sprites/gfx/uk.png 385 922 9 43 36 -17 -37
+  180 sprites/gfx/uk.png 422 922 9 43 36 -17 -37
+  181 sprites/gfx/uk.png 459 922 9 43 36 -17 -37
+  182 sprites/gfx/uk.png 200 966 9 43 36 -17 -37	//UK Semaphore One-way Path Signal III Yellow (04)
+  183 sprites/gfx/uk.png 237 966 9 43 36 -17 -37
+  184 sprites/gfx/uk.png 274 966 9 43 36 -17 -37
+  185 sprites/gfx/uk.png 311 966 9 43 36 -17 -37
+  186 sprites/gfx/uk.png 348 966 9 43 36 -17 -37
+  187 sprites/gfx/uk.png 385 966 9 43 36 -17 -37
+  188 sprites/gfx/uk.png 422 966 9 43 36 -17 -37
+  189 sprites/gfx/uk.png 459 966 9 43 36 -17 -37
+  190 sprites/gfx/uk.png 200 1010 9 43 36 -17 -36	//UK Semaphore One-way Path Signal III Green (05)
+  191 sprites/gfx/uk.png 237 1010 9 43 36 -17 -36
+  192 sprites/gfx/uk.png 274 1010 9 43 36 -17 -36
+  193 sprites/gfx/uk.png 311 1010 9 43 36 -17 -36
+  194 sprites/gfx/uk.png 348 1010 9 43 36 -17 -36
+  195 sprites/gfx/uk.png 385 1010 9 43 36 -17 -36
+  196 sprites/gfx/uk.png 422 1010 9 43 36 -17 -36
+  197 sprites/gfx/uk.png 459 1010 9 43 36 -17 -36
+  198 sprites/gfx/uk.png 200 00 9 35 20 -9 -30 //UK Electric Block Signal III Red (09)
+  199 sprites/gfx/uk.png 221 00 9 35 20 -9 -30
+  200 sprites/gfx/uk.png 242 00 9 35 20 -9 -30
+  201 sprites/gfx/uk.png 263 00 9 35 20 -9 -30
+  202 sprites/gfx/uk.png 284 00 9 35 20 -9 -30
+  203 sprites/gfx/uk.png 305 00 9 35 20 -9 -30
+  204 sprites/gfx/uk.png 326 00 9 35 20 -9 -30
+  205 sprites/gfx/uk.png 347 00 9 35 20 -9 -30	
+  206 sprites/gfx/uk.png 200 36 9 35 20 -9 -30 //UK Electric Block Signal III Yellow (0A)
+  207 sprites/gfx/uk.png 221 36 9 35 20 -9 -30
+  208 sprites/gfx/uk.png 242 36 9 35 20 -9 -30
+  209 sprites/gfx/uk.png 263 36 9 35 20 -9 -30
+  210 sprites/gfx/uk.png 284 36 9 35 20 -9 -30
+  211 sprites/gfx/uk.png 305 36 9 35 20 -9 -30
+  212 sprites/gfx/uk.png 326 36 9 35 20 -9 -30
+  213 sprites/gfx/uk.png 347 36 9 35 20 -9 -30
+  214 sprites/gfx/uk.png 200 72 9 35 20 -9 -30 //UK Electric Block Signal III Green (0B)
+  215 sprites/gfx/uk.png 221 72 9 35 20 -9 -30
+  216 sprites/gfx/uk.png 242 72 9 35 20 -9 -30
+  217 sprites/gfx/uk.png 263 72 9 35 20 -9 -30
+  218 sprites/gfx/uk.png 284 72 9 35 20 -9 -30
+  219 sprites/gfx/uk.png 305 72 9 35 20 -9 -30
+  220 sprites/gfx/uk.png 326 72 9 35 20 -9 -30
+  221 sprites/gfx/uk.png 347 72 9 35 20 -9 -30
+  222 sprites/gfx/uk.png 200 540 9 35 20 -9 -30 //UK Electric Path Signal III Red (0C)
+  223 sprites/gfx/uk.png 221 540 9 35 20 -9 -30
+  224 sprites/gfx/uk.png 242 540 9 35 20 -9 -30
+  225 sprites/gfx/uk.png 263 540 9 35 20 -9 -30
+  226 sprites/gfx/uk.png 284 540 9 35 20 -9 -30
+  227 sprites/gfx/uk.png 305 540 9 35 20 -9 -30
+  228 sprites/gfx/uk.png 326 540 9 35 20 -9 -30
+  229 sprites/gfx/uk.png 347 540 9 35 20 -9 -30  
+  230 sprites/gfx/uk.png 200 576 9 35 20 -9 -30 //UK Electric Path Signal III Yellow (0D)
+  231 sprites/gfx/uk.png 221 576 9 35 20 -9 -30
+  232 sprites/gfx/uk.png 242 576 9 35 20 -9 -30
+  233 sprites/gfx/uk.png 263 576 9 35 20 -9 -30
+  234 sprites/gfx/uk.png 284 576 9 35 20 -9 -30
+  235 sprites/gfx/uk.png 305 576 9 35 20 -9 -30
+  236 sprites/gfx/uk.png 326 576 9 35 20 -9 -30
+  237 sprites/gfx/uk.png 347 576 9 35 20 -9 -30
+  238 sprites/gfx/uk.png 200 612 9 35 20 -9 -30 //UK Electric Path Signal III Green (0E)
+  239 sprites/gfx/uk.png 221 612 9 35 20 -9 -30
+  240 sprites/gfx/uk.png 242 612 9 35 20 -9 -30
+  241 sprites/gfx/uk.png 263 612 9 35 20 -9 -30
+  242 sprites/gfx/uk.png 284 612 9 35 20 -9 -30
+  243 sprites/gfx/uk.png 305 612 9 35 20 -9 -30
+  244 sprites/gfx/uk.png 326 612 9 35 20 -9 -30
+  245 sprites/gfx/uk.png 347 612 9 35 20 -9 -30
+  246 sprites/gfx/uk.png 00 612 9 35 20 -9 -30 //UK Electric One-way Path Signal III Red (0F)
+  247 sprites/gfx/uk.png 21 612 9 35 20 -9 -30
+  248 sprites/gfx/uk.png 42 612 9 35 20 -9 -30
+  249 sprites/gfx/uk.png 63 612 9 35 20 -9 -30
+  250 sprites/gfx/uk.png 84 612 9 35 20 -9 -30
+  251 sprites/gfx/uk.png 105 612 9 35 20 -9 -30
+  252 sprites/gfx/uk.png 126 612 9 35 20 -9 -30
+  253 sprites/gfx/uk.png 147 612 9 35 20 -9 -30	
+  254 sprites/gfx/uk.png 00 648 9 35 20 -9 -30 //UK Electric One-way Path Signal III Yellow (10)
+  255 sprites/gfx/uk.png 21 648 9 35 20 -9 -30
+  256 sprites/gfx/uk.png 42 648 9 35 20 -9 -30
+  257 sprites/gfx/uk.png 63 648 9 35 20 -9 -30
+  258 sprites/gfx/uk.png 84 648 9 35 20 -9 -30
+  259 sprites/gfx/uk.png 105 648 9 35 20 -9 -30
+  260 sprites/gfx/uk.png 126 648 9 35 20 -9 -30
+  261 sprites/gfx/uk.png 147 648 9 35 20 -9 -30	
+  262 sprites/gfx/uk.png 00 684 9 35 20 -9 -30 //UK Electric One-way Path Signal III Green (11)
+  263 sprites/gfx/uk.png 21 684 9 35 20 -9 -30
+  264 sprites/gfx/uk.png 42 684 9 35 20 -9 -30
+  265 sprites/gfx/uk.png 63 684 9 35 20 -9 -30
+  266 sprites/gfx/uk.png 84 684 9 35 20 -9 -30
+  267 sprites/gfx/uk.png 105 684 9 35 20 -9 -30
+  268 sprites/gfx/uk.png 126 684 9 35 20 -9 -30
+  269 sprites/gfx/uk.png 147 684 9 35 20 -9 -30	
+  270 sprites/gfx/uk.png 00 72 9 35 20 -9 -30	//UK Electric Block Signal IV Red (00)
+  271 sprites/gfx/uk.png 21 72 9 35 20 -9 -30
+  272 sprites/gfx/uk.png 42 72 9 35 20 -9 -30
+  273 sprites/gfx/uk.png 63 72 9 35 20 -9 -30
+  274 sprites/gfx/uk.png 84 72 9 35 20 -9 -30
+  275 sprites/gfx/uk.png 105 72 9 35 20 -9 -30
+  276 sprites/gfx/uk.png 126 72 9 35 20 -9 -30
+  277 sprites/gfx/uk.png 147 72 9 35 20 -9 -30
+  278 sprites/gfx/uk.png 00 108 9 35 20 -9 -30	//UK Electric Block Signal IV Yellow (01)
+  279 sprites/gfx/uk.png 21 108 9 35 20 -9 -30
+  280 sprites/gfx/uk.png 42 108 9 35 20 -9 -30
+  281 sprites/gfx/uk.png 63 108 9 35 20 -9 -30
+  282 sprites/gfx/uk.png 84 108 9 35 20 -9 -30
+  283 sprites/gfx/uk.png 105 108 9 35 20 -9 -30
+  284 sprites/gfx/uk.png 126 108 9 35 20 -9 -30
+  285 sprites/gfx/uk.png 147 108 9 35 20 -9 -30
+  286 sprites/gfx/uk.png 00 144 9 35 20 -9 -30	//UK Electric Block Signal IV Double Yellow (02)
+  287 sprites/gfx/uk.png 21 144 9 35 20 -9 -30
+  288 sprites/gfx/uk.png 42 144 9 35 20 -9 -30
+  289 sprites/gfx/uk.png 63 144 9 35 20 -9 -30
+  290 sprites/gfx/uk.png 84 144 9 35 20 -9 -30
+  291 sprites/gfx/uk.png 105 144 9 35 20 -9 -30
+  292 sprites/gfx/uk.png 126 144 9 35 20 -9 -30
+  293 sprites/gfx/uk.png 147 144 9 35 20 -9 -30
+  294 sprites/gfx/uk.png 00 180 9 35 20 -9 -30	//UK Electric Block Signal IV Green (03)
+  295 sprites/gfx/uk.png 21 180 9 35 20 -9 -30
+  296 sprites/gfx/uk.png 42 180 9 35 20 -9 -30
+  297 sprites/gfx/uk.png 63 180 9 35 20 -9 -30
+  298 sprites/gfx/uk.png 84 180 9 35 20 -9 -30
+  299 sprites/gfx/uk.png 105 180 9 35 20 -9 -30
+  300 sprites/gfx/uk.png 126 180 9 35 20 -9 -30
+  301 sprites/gfx/uk.png 147 180 9 35 20 -9 -30
+  302 sprites/gfx/uk.png 200 396 9 35 20 -9 -30	//UK Electric Path Signal IV Red (04)
+  303 sprites/gfx/uk.png 221 396 9 35 20 -9 -30
+  304 sprites/gfx/uk.png 242 396 9 35 20 -9 -30
+  305 sprites/gfx/uk.png 263 396 9 35 20 -9 -30
+  306 sprites/gfx/uk.png 284 396 9 35 20 -9 -30
+  307 sprites/gfx/uk.png 305 396 9 35 20 -9 -30
+  308 sprites/gfx/uk.png 326 396 9 35 20 -9 -30
+  309 sprites/gfx/uk.png 347 396 9 35 20 -9 -30
+  310 sprites/gfx/uk.png 200 432 9 35 20 -9 -30	//UK Electric Path Signal IV Red (05)
+  311 sprites/gfx/uk.png 221 432 9 35 20 -9 -30
+  312 sprites/gfx/uk.png 242 432 9 35 20 -9 -30
+  313 sprites/gfx/uk.png 263 432 9 35 20 -9 -30
+  314 sprites/gfx/uk.png 284 432 9 35 20 -9 -30
+  315 sprites/gfx/uk.png 305 432 9 35 20 -9 -30
+  316 sprites/gfx/uk.png 326 432 9 35 20 -9 -30
+  317 sprites/gfx/uk.png 347 432 9 35 20 -9 -30
+  318 sprites/gfx/uk.png 200 468 9 35 20 -9 -30	//UK Electric Path Signal IV Red (06)
+  319 sprites/gfx/uk.png 221 468 9 35 20 -9 -30
+  320 sprites/gfx/uk.png 242 468 9 35 20 -9 -30
+  321 sprites/gfx/uk.png 263 468 9 35 20 -9 -30
+  322 sprites/gfx/uk.png 284 468 9 35 20 -9 -30
+  323 sprites/gfx/uk.png 305 468 9 35 20 -9 -30
+  324 sprites/gfx/uk.png 326 468 9 35 20 -9 -30
+  325 sprites/gfx/uk.png 347 468 9 35 20 -9 -30  
+  326 sprites/gfx/uk.png 200 504 9 35 20 -9 -30	//UK Electric Path Signal IV Red (07)
+  327 sprites/gfx/uk.png 221 504 9 35 20 -9 -30
+  328 sprites/gfx/uk.png 242 504 9 35 20 -9 -30
+  329 sprites/gfx/uk.png 263 504 9 35 20 -9 -30
+  330 sprites/gfx/uk.png 284 504 9 35 20 -9 -30
+  331 sprites/gfx/uk.png 305 504 9 35 20 -9 -30
+  332 sprites/gfx/uk.png 326 504 9 35 20 -9 -30
+  333 sprites/gfx/uk.png 347 504 9 35 20 -9 -30  
+  334 sprites/gfx/uk.png 00 468 9 35 20 -9 -30	//UK Electric One-way Path Signal IV Red (08)
+  335 sprites/gfx/uk.png 21 468 9 35 20 -9 -30
+  336 sprites/gfx/uk.png 42 468 9 35 20 -9 -30
+  337 sprites/gfx/uk.png 63 468 9 35 20 -9 -30
+  338 sprites/gfx/uk.png 84 468 9 35 20 -9 -30
+  339 sprites/gfx/uk.png 105 468 9 35 20 -9 -30
+  340 sprites/gfx/uk.png 126 468 9 35 20 -9 -30
+  341 sprites/gfx/uk.png 147 468 9 35 20 -9 -30  
+  342 sprites/gfx/uk.png 00 504 9 35 20 -9 -30	//UK Electric One-way Path Signal IV Yellow (09)
+  343 sprites/gfx/uk.png 21 504 9 35 20 -9 -30
+  344 sprites/gfx/uk.png 42 504 9 35 20 -9 -30
+  345 sprites/gfx/uk.png 63 504 9 35 20 -9 -30
+  346 sprites/gfx/uk.png 84 504 9 35 20 -9 -30
+  347 sprites/gfx/uk.png 105 504 9 35 20 -9 -30
+  348 sprites/gfx/uk.png 126 504 9 35 20 -9 -30
+  349 sprites/gfx/uk.png 147 504 9 35 20 -9 -30  
+  350 sprites/gfx/uk.png 00 540 9 35 20 -9 -30	//UK Electric One-way Path Signal IV 2 Yellow (0A)
+  351 sprites/gfx/uk.png 21 540 9 35 20 -9 -30
+  352 sprites/gfx/uk.png 42 540 9 35 20 -9 -30
+  353 sprites/gfx/uk.png 63 540 9 35 20 -9 -30
+  354 sprites/gfx/uk.png 84 540 9 35 20 -9 -30
+  355 sprites/gfx/uk.png 105 540 9 35 20 -9 -30
+  356 sprites/gfx/uk.png 126 540 9 35 20 -9 -30
+  357 sprites/gfx/uk.png 147 540 9 35 20 -9 -30  
+  358 sprites/gfx/uk.png 00 576 9 35 20 -9 -30	//UK Electric One-way Path Signal IV Green (0B)
+  359 sprites/gfx/uk.png 21 576 9 35 20 -9 -30
+  360 sprites/gfx/uk.png 42 576 9 35 20 -9 -30
+  361 sprites/gfx/uk.png 63 576 9 35 20 -9 -30
+  362 sprites/gfx/uk.png 84 576 9 35 20 -9 -30
+  363 sprites/gfx/uk.png 105 576 9 35 20 -9 -30
+  364 sprites/gfx/uk.png 126 576 9 35 20 -9 -30
+  365 sprites/gfx/uk.png 147 576 9 35 20 -9 -30
+  366 sprites/gfx/uk.png 00 216 9 35 20 -9 -30	//UK Semaphore Block Repeater Yellow (00)
+  367 sprites/gfx/uk.png 21 216 9 35 20 -9 -30
+  368 sprites/gfx/uk.png 42 216 9 35 20 -9 -30
+  369 sprites/gfx/uk.png 63 216 9 35 20 -9 -30
+  370 sprites/gfx/uk.png 84 216 9 35 20 -9 -30
+  371 sprites/gfx/uk.png 105 216 9 35 20 -9 -30
+  372 sprites/gfx/uk.png 126 216 9 35 20 -9 -30
+  373 sprites/gfx/uk.png 147 216 9 35 20 -9 -30
+  374 sprites/gfx/uk.png 00 252 9 35 20 -9 -30	//UK Semaphore Block Repeater Green (01)
+  375 sprites/gfx/uk.png 21 252 9 35 20 -9 -30
+  376 sprites/gfx/uk.png 42 252 9 35 20 -9 -30
+  377 sprites/gfx/uk.png 63 252 9 35 20 -9 -30
+  378 sprites/gfx/uk.png 84 252 9 35 20 -9 -30
+  379 sprites/gfx/uk.png 105 252 9 35 20 -9 -30
+  380 sprites/gfx/uk.png 126 252 9 35 20 -9 -30
+  381 sprites/gfx/uk.png 147 252 9 35 20 -9 -30
+  382 sprites/gfx/uk.png 200 288 9 35 36 -17 -31	//UK Semaphore Path Repeater Yellow (02)
+  383 sprites/gfx/uk.png 237 288 9 35 36 -17 -31
+  384 sprites/gfx/uk.png 274 288 9 35 36 -17 -31
+  385 sprites/gfx/uk.png 311 288 9 35 36 -17 -31
+  386 sprites/gfx/uk.png 348 288 9 35 36 -17 -31
+  387 sprites/gfx/uk.png 385 288 9 35 36 -17 -31
+  388 sprites/gfx/uk.png 422 288 9 35 36 -17 -31
+  389 sprites/gfx/uk.png 459 288 9 35 36 -17 -31
+  390 sprites/gfx/uk.png 200 324 9 35 36 -17 -31	//UK Semaphore Path Repeater Green (03)
+  391 sprites/gfx/uk.png 237 324 9 35 36 -17 -31
+  392 sprites/gfx/uk.png 274 324 9 35 36 -17 -31
+  393 sprites/gfx/uk.png 311 324 9 35 36 -17 -31
+  394 sprites/gfx/uk.png 348 324 9 35 36 -17 -31
+  395 sprites/gfx/uk.png 385 324 9 35 36 -17 -31
+  396 sprites/gfx/uk.png 422 324 9 35 36 -17 -31
+  397 sprites/gfx/uk.png 459 324 9 35 36 -17 -31
+  398 sprites/gfx/uk.png 200 144 9 35 20 -9 -30 //UK Electric Block Repeater Yellow (04)
+  399 sprites/gfx/uk.png 221 144 9 35 20 -9 -30
+  400 sprites/gfx/uk.png 242 144 9 35 20 -9 -30
+  401 sprites/gfx/uk.png 263 144 9 35 20 -9 -30
+  402 sprites/gfx/uk.png 284 144 9 35 20 -9 -30
+  403 sprites/gfx/uk.png 305 144 9 35 20 -9 -30
+  404 sprites/gfx/uk.png 326 144 9 35 20 -9 -30
+  405 sprites/gfx/uk.png 347 144 9 35 20 -9 -30
+  406 sprites/gfx/uk.png 200 180 9 35 20 -9 -30 //UK Electric Block Repeater Green (05)
+  407 sprites/gfx/uk.png 221 180 9 35 20 -9 -30
+  408 sprites/gfx/uk.png 242 180 9 35 20 -9 -30
+  409 sprites/gfx/uk.png 263 180 9 35 20 -9 -30
+  410 sprites/gfx/uk.png 284 180 9 35 20 -9 -30
+  411 sprites/gfx/uk.png 305 180 9 35 20 -9 -30
+  412 sprites/gfx/uk.png 326 180 9 35 20 -9 -30
+  413 sprites/gfx/uk.png 347 180 9 35 20 -9 -30
+  414 sprites/gfx/uk.png 00 396 9 35 20 -9 -30	//UK Electric Repeater On (06)
+  415 sprites/gfx/uk.png 21 396 9 35 20 -9 -30
+  416 sprites/gfx/uk.png 42 396 9 35 20 -9 -30
+  417 sprites/gfx/uk.png 63 396 9 35 20 -9 -30
+  418 sprites/gfx/uk.png 84 396 9 35 20 -9 -30
+  419 sprites/gfx/uk.png 105 396 9 35 20 -9 -30
+  420 sprites/gfx/uk.png 126 396 9 35 20 -9 -30
+  421 sprites/gfx/uk.png 147 396 9 35 20 -9 -30
+  422 sprites/gfx/uk.png 00 432 9 35 20 -9 -30	//UK Electric Repeater Off (07)
+  423 sprites/gfx/uk.png 21 432 9 35 20 -9 -30
+  424 sprites/gfx/uk.png 42 432 9 35 20 -9 -30
+  425 sprites/gfx/uk.png 63 432 9 35 20 -9 -30
+  426 sprites/gfx/uk.png 84 432 9 35 20 -9 -30
+  427 sprites/gfx/uk.png 105 432 9 35 20 -9 -30
+  428 sprites/gfx/uk.png 126 432 9 35 20 -9 -30
+  429 sprites/gfx/uk.png 147 432 9 35 20 -9 -30
+  430 sprites/gfx/uk.png 00 864 9 35 20 -9 -30	//UK Semaphore Shunt Off (00)
+  431 sprites/gfx/uk.png 21 864 9 35 20 -9 -30
+  432 sprites/gfx/uk.png 42 864 9 35 20 -9 -30
+  433 sprites/gfx/uk.png 63 864 9 35 20 -9 -30
+  434 sprites/gfx/uk.png 84 864 9 35 20 -9 -30
+  435 sprites/gfx/uk.png 105 864 9 35 20 -9 -30
+  436 sprites/gfx/uk.png 126 864 9 35 20 -9 -30
+  437 sprites/gfx/uk.png 147 864 9 35 20 -9 -30
+  438 sprites/gfx/uk.png 00 900 9 35 20 -9 -30	//UK Semaphore Shunt on (01)
+  439 sprites/gfx/uk.png 21 900 9 35 20 -9 -30
+  440 sprites/gfx/uk.png 42 900 9 35 20 -9 -30
+  441 sprites/gfx/uk.png 63 900 9 35 20 -9 -30
+  442 sprites/gfx/uk.png 84 900 9 35 20 -9 -30
+  443 sprites/gfx/uk.png 105 900 9 35 20 -9 -30
+  444 sprites/gfx/uk.png 126 900 9 35 20 -9 -30
+  445 sprites/gfx/uk.png 147 900 9 35 20 -9 -30
+  446 sprites/gfx/uk.png 00 792 9 35 20 -9 -30	//UK Electric Shunt off (02)
+  447 sprites/gfx/uk.png 21 792 9 35 20 -9 -30
+  448 sprites/gfx/uk.png 42 792 9 35 20 -9 -30
+  449 sprites/gfx/uk.png 63 792 9 35 20 -9 -30
+  450 sprites/gfx/uk.png 84 792 9 35 20 -9 -30
+  451 sprites/gfx/uk.png 105 792 9 35 20 -9 -30
+  452 sprites/gfx/uk.png 126 792 9 35 20 -9 -30
+  453 sprites/gfx/uk.png 147 792 9 35 20 -9 -30
+  454 sprites/gfx/uk.png 00 828 9 35 20 -9 -30	//UK Electric Shunt on (03)
+  455 sprites/gfx/uk.png 21 828 9 35 20 -9 -30
+  456 sprites/gfx/uk.png 42 828 9 35 20 -9 -30
+  457 sprites/gfx/uk.png 63 828 9 35 20 -9 -30
+  458 sprites/gfx/uk.png 84 828 9 35 20 -9 -30
+  459 sprites/gfx/uk.png 105 828 9 35 20 -9 -30
+  460 sprites/gfx/uk.png 126 828 9 35 20 -9 -30
+  461 sprites/gfx/uk.png 147 828 9 35 20 -9 -30
 
 //UK2
-  464 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set 00: UK Semaphore Block Signal (Red)
-  465 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set 01: UK Semaphore Block Signal (Green)
-  466 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set 02: UK Semaphore Path Signal (Red)
-  467 * 9	 02 0E 03 01 01 \wx3 \wx3		//Set 03: UK Semaphore Path Signal (Green)
-  468 * 9	 02 0E 04 01 01 \wx4 \wx4		//Set 04: UK Semaphore One-way Path Signal (Red)
-  469 * 9	 02 0E 05 01 01 \wx5 \wx5		//Set 05: UK Semaphore One-way Path Signal (Green)
-  470 * 9	 02 0E 06 01 01 \wx6 \wx6		//Set 06: UK Electric Block Signal (Red)
-  471 * 9	 02 0E 07 01 01 \wx7 \wx7		//Set 07: UK Electric Block Signal (Green)
-  472 * 9	 02 0E 08 01 01 \wx8 \wx8		//Set 08: UK Electric Path Signal (Red)
-  473 * 9	 02 0E 09 01 01 \wx9 \wx9		//Set 09: UK Electric Path Signal (Green)
-  474 * 9	 02 0E 0A 01 01 \wxA \wxA		//Set 0A: UK Electric One-way Path Signal (Red)
-  475 * 9	 02 0E 0B 01 01 \wxB \wxB		//Set 0B: UK Electric One-way Path Signal (Green)
+  462 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set 00: UK Semaphore Block Signal (Red)
+  463 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set 01: UK Semaphore Block Signal (Green)
+  464 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set 02: UK Semaphore Path Signal (Red)
+  465 * 9	 02 0E 03 01 01 \wx3 \wx3		//Set 03: UK Semaphore Path Signal (Green)
+  466 * 9	 02 0E 04 01 01 \wx4 \wx4		//Set 04: UK Semaphore One-way Path Signal (Red)
+  467 * 9	 02 0E 05 01 01 \wx5 \wx5		//Set 05: UK Semaphore One-way Path Signal (Green)
+  468 * 9	 02 0E 06 01 01 \wx6 \wx6		//Set 06: UK Electric Block Signal (Red)
+  469 * 9	 02 0E 07 01 01 \wx7 \wx7		//Set 07: UK Electric Block Signal (Green)
+  470 * 9	 02 0E 08 01 01 \wx8 \wx8		//Set 08: UK Electric Path Signal (Red)
+  471 * 9	 02 0E 09 01 01 \wx9 \wx9		//Set 09: UK Electric Path Signal (Green)
+  472 * 9	 02 0E 0A 01 01 \wxA \wxA		//Set 0A: UK Electric One-way Path Signal (Red)
+  473 * 9	 02 0E 0B 01 01 \wxB \wxB		//Set 0B: UK Electric One-way Path Signal (Green)
 
-  476 * 23	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					UK Semaphore Block Signal state VA2	20
+  474 * 23	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					UK Semaphore Block Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			00 00 00 00 00 00 00 00 00 00
 			01 00
 
-  477 * 23	 02 0E 0D 89 			//Act 2, Feature 0E, ID 0D, 1-byte variable 					UK Semaphore Path Signal state VA2	20
+  475 * 23	 02 0E 0D 89 			//Act 2, Feature 0E, ID 0D, 1-byte variable 					UK Semaphore Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			02 00 00 00 00 00 00 00 00 00
 			03 00
 
-  478 * 23	 02 0E 0E 89 			//Act 2, Feature 0E, ID 0E, 1-byte variable 					UK Semaphore One-way Path Signal state VA2	20
+  476 * 23	 02 0E 0E 89 			//Act 2, Feature 0E, ID 0E, 1-byte variable 					UK Semaphore One-way Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			04 00 00 00 00 00 00 00 00 00
 			05 00
 
-  479 * 33	 02 0E 0F 89 			//Act 2, Feature 0E, ID 0F, 1-byte variable 					UK Semaphore Signal II Type VA2	20
+  477 * 33	 02 0E 0F 89 			//Act 2, Feature 0E, ID 0F, 1-byte variable 					UK Semaphore Signal II Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			0D 00 00 00 04 00 00 00 04 00
@@ -724,79 +722,79 @@
 			0C 00
 
 
-  480 * 23	 02 0E 10 89 			//Act 2, Feature 0E, ID 10, 1-byte variable 					UK Electric Block Signal state VA2	20
+  478 * 23	 02 0E 10 89 			//Act 2, Feature 0E, ID 10, 1-byte variable 					UK Electric Block Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			06 00 00 00 00 00 00 00 00 00
 			07 00
 
-  481 * 23	 02 0E 11 89 			//Act 2, Feature 0E, ID 11, 1-byte variable 					UK Electric Path Signal state VA2	20
+  479 * 23	 02 0E 11 89 			//Act 2, Feature 0E, ID 11, 1-byte variable 					UK Electric Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			08 00 00 00 00 00 00 00 00 00
 			09 00
 
-  482 * 23	 02 0E 12 89 			//Act 2, Feature 0E, ID 12, 1-byte variable 					UK Electric One-way Path Signal state VA2	20
+  480 * 23	 02 0E 12 89 			//Act 2, Feature 0E, ID 12, 1-byte variable 					UK Electric One-way Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			0A 00 00 00 00 00 00 00 00 00
 			0B 00
 
-  483 * 33	 02 0E 13 89 			//Act 2, Feature 0E, ID 13, 1-byte variable 					UK Electric Signal II Type VA2	20
+  481 * 33	 02 0E 13 89 			//Act 2, Feature 0E, ID 13, 1-byte variable 					UK Electric Signal II Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			11 00 00 00 04 00 00 00 04 00
 			12 00 00 00 05 00 00 00 05 00
 			10 00
 
-  484 * 23	 02 0E A0 89 			//Act 2, Feature 0E, ID A0, 1-byte variable 					UK Signal II Semaphore/Electric VA2	2E
+  482 * 23	 02 0E A0 89 			//Act 2, Feature 0E, ID A0, 1-byte variable 					UK Signal II Semaphore/Electric VA2	2E
 			18 00 00 FF 00 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			0F 00 00 01 00 00 00 01 00 00
 			13 00
 
 //UK3
-  485 * 9	 02 0E 00 01 01 \wxC \wxC		//Set 00: UK Semaphore Block III Signal (Red)
-  486 * 9	 02 0E 01 01 01 \wxD \wxD		//Set 01: UK Semaphore Block III Signal (Yellow)
-  487 * 9	 02 0E 02 01 01 \wxE \wxE		//Set 02: UK Semaphore Block III Signal (Green)
-  488 * 9	 02 0E 03 01 01 \wxF \wxF		//Set 03: UK Semaphore Path III Signal (Red)
-  489 * 9	 02 0E 04 01 01 \wx10 \wx10		//Set 04: UK Semaphore Path III Signal (Yellow)
-  490 * 9	 02 0E 05 01 01 \wx11 \wx11		//Set 05: UK Semaphore Path III Signal (Green)
-  491 * 9	 02 0E 06 01 01 \wx12 \wx12		//Set 06: UK Semaphore One-way Path III Signal (Red)
-  492 * 9	 02 0E 07 01 01 \wx13 \wx13		//Set 07: UK Semaphore One-way Path III Signal (Yellow)
-  493 * 9	 02 0E 08 01 01 \wx14 \wx14		//Set 08: UK Semaphore One-way Path III Signal (Green)
-  494 * 9	 02 0E 09 01 01 \wx15 \wx15		//Set 09: UK Electric Block III Signal (Red)
-  495 * 9	 02 0E 0A 01 01 \wx16 \wx16		//Set 0A: UK Electric Block III Signal (Yellow)
-  496 * 9	 02 0E 0B 01 01 \wx17 \wx17		//Set 0B: UK Electric Block III Signal (Green)
-  497 * 9	 02 0E 0C 01 01 \wx18 \wx18		//Set 0C: UK Electric Path III Signal (Red)
-  498 * 9	 02 0E 0D 01 01 \wx19 \wx19		//Set 0D: UK Electric Path III Signal (Yellow)
-  499 * 9	 02 0E 0E 01 01 \wx1A \wx1A		//Set 0E: UK Electric Path III Signal (Green)
-  500 * 9	 02 0E 0F 01 01 \wx1B \wx1B		//Set 0F: UK Electric One-way Path III Signal (Red)
-  501 * 9	 02 0E 10 01 01 \wx1C \wx1C		//Set 10: UK Electric One-way Path III Signal (Yellow)
-  502 * 9	 02 0E 11 01 01 \wx1D \wx1D		//Set 11: UK Electric One-way Path III Signal (Green)
+  483 * 9	 02 0E 00 01 01 \wxC \wxC		//Set 00: UK Semaphore Block III Signal (Red)
+  484 * 9	 02 0E 01 01 01 \wxD \wxD		//Set 01: UK Semaphore Block III Signal (Yellow)
+  485 * 9	 02 0E 02 01 01 \wxE \wxE		//Set 02: UK Semaphore Block III Signal (Green)
+  486 * 9	 02 0E 03 01 01 \wxF \wxF		//Set 03: UK Semaphore Path III Signal (Red)
+  487 * 9	 02 0E 04 01 01 \wx10 \wx10		//Set 04: UK Semaphore Path III Signal (Yellow)
+  488 * 9	 02 0E 05 01 01 \wx11 \wx11		//Set 05: UK Semaphore Path III Signal (Green)
+  489 * 9	 02 0E 06 01 01 \wx12 \wx12		//Set 06: UK Semaphore One-way Path III Signal (Red)
+  490 * 9	 02 0E 07 01 01 \wx13 \wx13		//Set 07: UK Semaphore One-way Path III Signal (Yellow)
+  491 * 9	 02 0E 08 01 01 \wx14 \wx14		//Set 08: UK Semaphore One-way Path III Signal (Green)
+  492 * 9	 02 0E 09 01 01 \wx15 \wx15		//Set 09: UK Electric Block III Signal (Red)
+  493 * 9	 02 0E 0A 01 01 \wx16 \wx16		//Set 0A: UK Electric Block III Signal (Yellow)
+  494 * 9	 02 0E 0B 01 01 \wx17 \wx17		//Set 0B: UK Electric Block III Signal (Green)
+  495 * 9	 02 0E 0C 01 01 \wx18 \wx18		//Set 0C: UK Electric Path III Signal (Red)
+  496 * 9	 02 0E 0D 01 01 \wx19 \wx19		//Set 0D: UK Electric Path III Signal (Yellow)
+  497 * 9	 02 0E 0E 01 01 \wx1A \wx1A		//Set 0E: UK Electric Path III Signal (Green)
+  498 * 9	 02 0E 0F 01 01 \wx1B \wx1B		//Set 0F: UK Electric One-way Path III Signal (Red)
+  499 * 9	 02 0E 10 01 01 \wx1C \wx1C		//Set 10: UK Electric One-way Path III Signal (Yellow)
+  500 * 9	 02 0E 11 01 01 \wx1D \wx1D		//Set 11: UK Electric One-way Path III Signal (Green)
 
-  503 * 33	 02 0E 17 89 			//Act 2, Feature 0E, ID 17, 1-byte variable 					UK Semaphore Block Signal III state VA2	20
+  501 * 33	 02 0E 17 89 			//Act 2, Feature 0E, ID 17, 1-byte variable 					UK Semaphore Block Signal III state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			00 00 00 00 00 00 00 00 00 00
 			01 00 02 00 00 00 02 00 00 00
 			02 00
 
-  504 * 33	 02 0E 18 89 			//Act 2, Feature 0E, ID 18, 1-byte variable 					UK Semaphore Path Signal III state VA2	20
+  502 * 33	 02 0E 18 89 			//Act 2, Feature 0E, ID 18, 1-byte variable 					UK Semaphore Path Signal III state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			03 00 00 00 00 00 00 00 00 00
 			04 00 02 00 00 00 02 00 00 00
 			05 00
 
-  505 * 33	 02 0E 19 89 			//Act 2, Feature 0E, ID 19, 1-byte variable 					UK Semaphore One-way Path Signal III state VA2	20
+  503 * 33	 02 0E 19 89 			//Act 2, Feature 0E, ID 19, 1-byte variable 					UK Semaphore One-way Path Signal III state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			06 00 00 00 00 00 00 00 00 00
 			07 00 02 00 00 00 02 00 00 00
 			08 00
 
-  506 * 33	 02 0E 1A 89 			//Act 2, Feature 0E, ID 1A, 1-byte variable 					UK Semaphore Signal III Type VA2	20
+  504 * 33	 02 0E 1A 89 			//Act 2, Feature 0E, ID 1A, 1-byte variable 					UK Semaphore Signal III Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			18 00 00 00 04 00 00 00 04 00
@@ -804,56 +802,56 @@
 			17 00
 
 
-  507 * 33	 02 0E 1B 89 			//Act 2, Feature 0E, ID 1B, 1-byte variable 					UK Electric Block Signal III state VA2	20
+  505 * 33	 02 0E 1B 89 			//Act 2, Feature 0E, ID 1B, 1-byte variable 					UK Electric Block Signal III state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//1 range
 			09 00 00 00 00 00 00 00 00 00
 			0A 00 02 00 00 00 02 00 00 00
 			0B 00
 
-  508 * 33	 02 0E 1C 89 			//Act 2, Feature 0E, ID 1C, 1-byte variable 					UK Electric Path Signal III state VA2	20
+  506 * 33	 02 0E 1C 89 			//Act 2, Feature 0E, ID 1C, 1-byte variable 					UK Electric Path Signal III state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			0C 00 00 00 00 00 00 00 00 00
 			0D 00 02 00 00 00 02 00 00 00
 			0E 00
 
-  509 * 33	 02 0E 1D 89 			//Act 2, Feature 0E, ID 1D, 1-byte variable 					UK Electric One-way Path Signal III state VA2	20
+  507 * 33	 02 0E 1D 89 			//Act 2, Feature 0E, ID 1D, 1-byte variable 					UK Electric One-way Path Signal III state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			0F 00 00 00 00 00 00 00 00 00
 			10 00 02 00 00 00 02 00 00 00
 			11 00
 
-  510 * 33	 02 0E 1E 89 			//Act 2, Feature 0E, ID 2E, 1-byte variable 					UK Electric Signal III Type VA2	20
+  508 * 33	 02 0E 1E 89 			//Act 2, Feature 0E, ID 2E, 1-byte variable 					UK Electric Signal III Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			1C 00 00 00 04 00 00 00 04 00
 			1D 00 00 00 05 00 00 00 05 00
 			1B 00
 
-  511 * 23	 02 0E A1 89 			//Act 2, Feature 0E, ID A1, 1-byte variable 					UK Signal III Semaphore/Electric VA2	2E
+  509 * 23	 02 0E A1 89 			//Act 2, Feature 0E, ID A1, 1-byte variable 					UK Signal III Semaphore/Electric VA2	2E
 			18 00 00 FF 00 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			1A 00 00 01 00 00 00 01 00 00
 			1E 00
 
 //UK4
-  512 * 9	 02 0E 00 01 01 \wx1E \wx1E		//Set 00: UK Electric 4 aspect Block Signal (Red)
-  513 * 9	 02 0E 01 01 01 \wx1F \wx1F		//Set 01: UK Electric 4 aspect Block Signal (Yellow)
-  514 * 9	 02 0E 02 01 01 \wx20 \wx20		//Set 02: UK Electric 4 aspect Block Signal (Yellow 2)
-  515 * 9	 02 0E 03 01 01 \wx21 \wx21		//Set 03: UK Electric 4 aspect Block Signal (Green)
-  516 * 9	 02 0E 04 01 01 \wx22 \wx22		//Set 04: UK Electric 4 aspect Path Signal (Red)
-  517 * 9	 02 0E 05 01 01 \wx23 \wx23		//Set 05: UK Electric 4 aspect Path Signal (Yellow)
-  518 * 9	 02 0E 06 01 01 \wx24 \wx24		//Set 06: UK Electric 4 aspect Path Signal (Yellow 2)
-  519 * 9	 02 0E 07 01 01 \wx25 \wx25		//Set 07: UK Electric 4 aspect Path Signal (Green)
-  520 * 9	 02 0E 08 01 01 \wx26 \wx26		//Set 08: UK Electric 4 aspect One-way Path Signal (Red)
-  521 * 9	 02 0E 09 01 01 \wx27 \wx27		//Set 09: UK Electric 4 aspect One-way Path Signal (Yellow)
-  522 * 9	 02 0E 0A 01 01 \wx28 \wx28		//Set 0A: UK Electric 4 aspect One-way Path Signal (Yellow 2)
-  523 * 9	 02 0E 0B 01 01 \wx29 \wx29		//Set 0B: UK Electric 4 aspect One-way Path Signal (Green)
+  510 * 9	 02 0E 00 01 01 \wx1E \wx1E		//Set 00: UK Electric 4 aspect Block Signal (Red)
+  511 * 9	 02 0E 01 01 01 \wx1F \wx1F		//Set 01: UK Electric 4 aspect Block Signal (Yellow)
+  512 * 9	 02 0E 02 01 01 \wx20 \wx20		//Set 02: UK Electric 4 aspect Block Signal (Yellow 2)
+  513 * 9	 02 0E 03 01 01 \wx21 \wx21		//Set 03: UK Electric 4 aspect Block Signal (Green)
+  514 * 9	 02 0E 04 01 01 \wx22 \wx22		//Set 04: UK Electric 4 aspect Path Signal (Red)
+  515 * 9	 02 0E 05 01 01 \wx23 \wx23		//Set 05: UK Electric 4 aspect Path Signal (Yellow)
+  516 * 9	 02 0E 06 01 01 \wx24 \wx24		//Set 06: UK Electric 4 aspect Path Signal (Yellow 2)
+  517 * 9	 02 0E 07 01 01 \wx25 \wx25		//Set 07: UK Electric 4 aspect Path Signal (Green)
+  518 * 9	 02 0E 08 01 01 \wx26 \wx26		//Set 08: UK Electric 4 aspect One-way Path Signal (Red)
+  519 * 9	 02 0E 09 01 01 \wx27 \wx27		//Set 09: UK Electric 4 aspect One-way Path Signal (Yellow)
+  520 * 9	 02 0E 0A 01 01 \wx28 \wx28		//Set 0A: UK Electric 4 aspect One-way Path Signal (Yellow 2)
+  521 * 9	 02 0E 0B 01 01 \wx29 \wx29		//Set 0B: UK Electric 4 aspect One-way Path Signal (Green)
 
 
-  524 * 43	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					UK Electric Block Signal IV state VA2	20
+  522 * 43	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					UK Electric Block Signal IV state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			03						//3 ranges
 			00 00 00 00 00 00 00 00 00 00
@@ -861,7 +859,7 @@
 			02 00 03 00 00 00 03 00 00 00
 			03 00
 
-  525 * 43	 02 0E 0D 89 			//Act 2, Feature 0E, ID 0D, 1-byte variable 					UK Electric Path Signal IV state VA2	20
+  523 * 43	 02 0E 0D 89 			//Act 2, Feature 0E, ID 0D, 1-byte variable 					UK Electric Path Signal IV state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			03						//3 ranges
 			04 00 00 00 00 00 00 00 00 00
@@ -869,7 +867,7 @@
 			06 00 03 00 00 00 03 00 00 00
 			07 00
 
-  526 * 43	 02 0E 0E 89 			//Act 2, Feature 0E, ID 0E, 1-byte variable 					UK Electric One-way Path Signal IV state VA2	20
+  524 * 43	 02 0E 0E 89 			//Act 2, Feature 0E, ID 0E, 1-byte variable 					UK Electric One-way Path Signal IV state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			03						//3 ranges
 			08 00 00 00 00 00 00 00 00 00
@@ -877,7 +875,7 @@
 			0A 00 03 00 00 00 03 00 00 00
 			0B 00
 
-  527 * 33	 02 0E A2 89 			//Act 2, Feature 0E, ID A2, 1-byte variable 					UK Electric Signal IV Type VA2	20
+  525 * 33	 02 0E A2 89 			//Act 2, Feature 0E, ID A2, 1-byte variable 					UK Electric Signal IV Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			0D 00 00 00 04 00 00 00 04 00
@@ -885,343 +883,343 @@
 			0C 00
 
 //UKR  
-  528 * 9	 02 0E 00 01 01 \wx2A \wx2A		//Set 00: UK Semaphore Block Repeater (Yellow)
-  529 * 9	 02 0E 01 01 01 \wx2B \wx2B		//Set 01: UK Semaphore Block Repeater (Green)
-  530 * 9	 02 0E 02 01 01 \wx2C \wx2C		//Set 02: UK Semaphore Path Repeater (Yellow)
-  531 * 9	 02 0E 03 01 01 \wx2D \wx2D		//Set 03: UK Semaphore Path Repeater (Green)
-  532 * 9	 02 0E 04 01 01 \wx2E \wx2E		//Set 04: UK Electric Block Repeater (Yellow)
-  533 * 9	 02 0E 05 01 01 \wx2F \wx2F		//Set 05: UK Electric Block Repeater (Green)
-  534 * 9	 02 0E 06 01 01 \wx30 \wx30		//Set 06: UK Electric Path Repeater (Yellow)
-  535 * 9	 02 0E 07 01 01 \wx31 \wx31		//Set 07: UK Electric Path Repeater (Green)
+  526 * 9	 02 0E 00 01 01 \wx2A \wx2A		//Set 00: UK Semaphore Block Repeater (Yellow)
+  527 * 9	 02 0E 01 01 01 \wx2B \wx2B		//Set 01: UK Semaphore Block Repeater (Green)
+  528 * 9	 02 0E 02 01 01 \wx2C \wx2C		//Set 02: UK Semaphore Path Repeater (Yellow)
+  529 * 9	 02 0E 03 01 01 \wx2D \wx2D		//Set 03: UK Semaphore Path Repeater (Green)
+  530 * 9	 02 0E 04 01 01 \wx2E \wx2E		//Set 04: UK Electric Block Repeater (Yellow)
+  531 * 9	 02 0E 05 01 01 \wx2F \wx2F		//Set 05: UK Electric Block Repeater (Green)
+  532 * 9	 02 0E 06 01 01 \wx30 \wx30		//Set 06: UK Electric Path Repeater (Yellow)
+  533 * 9	 02 0E 07 01 01 \wx31 \wx31		//Set 07: UK Electric Path Repeater (Green)
 
 
 
-  536 * 33	 02 0E 08 89 			//Act 2, Feature 0E, ID 08, 1-byte variable 					UK Semaphore Block Signal state VA2	20
+  534 * 33	 02 0E 08 89 			//Act 2, Feature 0E, ID 08, 1-byte variable 					UK Semaphore Block Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			00 00 00 00 00 00 00 00 00 00
 			00 00 02 00 00 00 02 00 00 00
 			01 00
 
-  537 * 33	 02 0E 09 89 			//Act 2, Feature 0E, ID 09, 1-byte variable 					UK Semaphore Path Signal state VA2	20
+  535 * 33	 02 0E 09 89 			//Act 2, Feature 0E, ID 09, 1-byte variable 					UK Semaphore Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			02 00 00 00 00 00 00 00 00 00
 			02 00 02 00 00 00 02 00 00 00
 			03 00
 
-  538 * 23	 02 0E 0A 89 			//Act 2, Feature 0E, ID 0A, 1-byte variable 					UK Semaphore Signal II Type VA2	20
+  536 * 23	 02 0E 0A 89 			//Act 2, Feature 0E, ID 0A, 1-byte variable 					UK Semaphore Signal II Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			09 00 00 00 04 00 00 00 04 00
 			08 00
 
 
-  539 * 33	 02 0E 0B 89 			//Act 2, Feature 0E, ID 0B, 1-byte variable 					UK Electric Block Signal state VA2	20
+  537 * 33	 02 0E 0B 89 			//Act 2, Feature 0E, ID 0B, 1-byte variable 					UK Electric Block Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			04 00 00 00 00 00 00 00 00 00
 			04 00 02 00 00 00 02 00 00 00
 			05 00
 
-  540 * 33	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					UK Electric Path Signal state VA2	20
+  538 * 33	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					UK Electric Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			06 00 00 00 00 00 00 00 00 00
 			06 00 02 00 00 00 02 00 00 00
 			07 00
 
-  541 * 23	 02 0E 0D 89 			//Act 2, Feature 0E, ID 0D, 1-byte variable 					UK Electric Signal II Type VA2	20
+  539 * 23	 02 0E 0D 89 			//Act 2, Feature 0E, ID 0D, 1-byte variable 					UK Electric Signal II Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			0C 00 00 00 04 00 00 00 04 00
 			0B 00
 
-  542 * 23	 02 0E A3 89 			//Act 2, Feature 0E, ID A3, 1-byte variable 					UK Signal II Semaphore/Electric VA2	2E
+  540 * 23	 02 0E A3 89 			//Act 2, Feature 0E, ID A3, 1-byte variable 					UK Signal II Semaphore/Electric VA2	2E
 			18 00 00 FF 00 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			0A 00 00 01 00 00 00 01 00 00
 			0D 00
 
 //UKS  
-  543 * 9	 02 0E 00 01 01 \wx32 \wx32		//Set 00: UK Semaphore Shunt off
-  544 * 9	 02 0E 01 01 01 \wx33 \wx33		//Set 01: UK Semaphore Shunt on
-  545 * 9	 02 0E 02 01 01 \wx34 \wx34		//Set 02: UK Electric Shunt off
-  546 * 9	 02 0E 03 01 01 \wx35 \wx35		//Set 03: UK Electric Shunt on
+  541 * 9	 02 0E 00 01 01 \wx32 \wx32		//Set 00: UK Semaphore Shunt off
+  542 * 9	 02 0E 01 01 01 \wx33 \wx33		//Set 01: UK Semaphore Shunt on
+  543 * 9	 02 0E 02 01 01 \wx34 \wx34		//Set 02: UK Electric Shunt off
+  544 * 9	 02 0E 03 01 01 \wx35 \wx35		//Set 03: UK Electric Shunt on
 
-  547 * 23	 02 0E 04 89 			//Act 2, Feature 0E, ID 04, 1-byte variable 					UK Semaphore Path Signal state VA2	20
+  545 * 23	 02 0E 04 89 			//Act 2, Feature 0E, ID 04, 1-byte variable 					UK Semaphore Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			01 00 \dx0 \dx0
 			00 00
 
 
-  548 * 23	 02 0E 05 89 			//Act 2, Feature 0E, ID 05, 1-byte variable 					UK Electric Path Signal state VA2	20
+  546 * 23	 02 0E 05 89 			//Act 2, Feature 0E, ID 05, 1-byte variable 					UK Electric Path Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			03 00 \dx0 \dx0
 			02 00
 
-  549 * 23	 02 0E A4 89 			//Act 2, Feature 0E, ID A4, 1-byte variable 					UK Signal II Semaphore/Electric VA2	2E
+  547 * 23	 02 0E A4 89 			//Act 2, Feature 0E, ID A4, 1-byte variable 					UK Signal II Semaphore/Electric VA2	2E
 			18 00 00 FF 00 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			04 00 \dx100 \dx100
 			05 00
 
 //!!Error (44): Invalid feature byte.
-  550 * 4	 01 0E 1C 08		
+  548 * 4	 01 0E 1C 08		
 
-  551 sprites/gfx/nl.png 00 288 9 35 20 -9 -30	//Set 00: NL Semaphore Block II Signal (Red)
-  552 sprites/gfx/nl.png 21 288 9 35 20 -9 -30
-  553 sprites/gfx/nl.png 42 288 9 35 20 -9 -30
-  554 sprites/gfx/nl.png 63 288 9 35 20 -9 -30
-  555 sprites/gfx/nl.png 84 288 9 35 20 -9 -30
-  556 sprites/gfx/nl.png 105 288 9 35 20 -9 -30
-  557 sprites/gfx/nl.png 126 288 9 35 20 -9 -30
-  558 sprites/gfx/nl.png 147 288 9 35 20 -9 -30
-  559 sprites/gfx/nl.png 00 324 9 35 20 -9 -30	//Set 01: NL Semaphore Block II Signal (Green)
-  560 sprites/gfx/nl.png 21 324 9 35 20 -9 -30
-  561 sprites/gfx/nl.png 42 324 9 35 20 -9 -30
-  562 sprites/gfx/nl.png 63 324 9 35 20 -9 -30
-  563 sprites/gfx/nl.png 84 324 9 35 20 -9 -30
-  564 sprites/gfx/nl.png 105 324 9 35 20 -9 -30
-  565 sprites/gfx/nl.png 126 324 9 35 20 -9 -30
-  566 sprites/gfx/nl.png 147 324 9 35 20 -9 -30
-  567 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 02: NL Semaphore Path II Signal (Red)
-  568 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  569 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  570 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  571 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  572 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  573 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  574 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  575 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 03: NL Semaphore Path II Signal (Green)
-  576 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  577 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  578 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  579 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  580 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  581 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  582 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  583 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 04: NL Semaphore One-way Path II Signal (Red)
-  584 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  585 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  586 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  587 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  588 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  589 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  590 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  591 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 05: NL Semaphore One-way Path II Signal (Green)
-  592 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  593 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  594 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  595 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  596 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  597 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  598 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  599 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 06: NL Semaphore Block III Signal (Red)
-  600 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  601 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  602 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  603 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  604 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  605 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  606 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  607 sprites/gfx/nl.png 00 36 9 35 20 -9 -30	//Set 07: NL Semaphore Block III Signal (Yellow)
-  608 sprites/gfx/nl.png 21 36 9 35 20 -9 -30
-  609 sprites/gfx/nl.png 42 36 9 35 20 -9 -30
-  610 sprites/gfx/nl.png 63 36 9 35 20 -9 -30
-  611 sprites/gfx/nl.png 84 36 9 35 20 -9 -30
-  612 sprites/gfx/nl.png 105 36 9 35 20 -9 -30
-  613 sprites/gfx/nl.png 126 36 9 35 20 -9 -30
-  614 sprites/gfx/nl.png 147 36 9 35 20 -9 -30
-  615 sprites/gfx/nl.png 00 72 9 35 20 -9 -30	//Set 08: NL Semaphore Block III Signal (Green)
-  616 sprites/gfx/nl.png 21 72 9 35 20 -9 -30
-  617 sprites/gfx/nl.png 42 72 9 35 20 -9 -30
-  618 sprites/gfx/nl.png 63 72 9 35 20 -9 -30
-  619 sprites/gfx/nl.png 84 72 9 35 20 -9 -30
-  620 sprites/gfx/nl.png 105 72 9 35 20 -9 -30
-  621 sprites/gfx/nl.png 126 72 9 35 20 -9 -30
-  622 sprites/gfx/nl.png 147 72 9 35 20 -9 -30
-  623 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 09: NL Semaphore Path III Signal (Red)
-  624 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  625 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  626 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  627 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  628 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  629 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  630 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  631 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0A: NL Semaphore Path III Signal (Yellow)
-  632 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  633 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  634 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  635 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  636 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  637 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  638 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  639 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0B: NL Semaphore Path III Signal (Green)
-  640 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  641 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  642 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  643 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  644 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  645 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  646 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  647 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0C: NL Semaphore One-way Path III Signal (Red)
-  648 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  649 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  650 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  651 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  652 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  653 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  654 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  655 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0D: NL Semaphore One-way Path III Signal (Yellow)
-  656 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  657 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  658 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  659 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  660 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  661 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  662 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  663 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0E: NL Semaphore One-way Path III Signal (Green)
-  664 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  665 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  666 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  667 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  668 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  669 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  670 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  671 sprites/gfx/nl.png 00 108 9 35 20 -9 -30	//Set 0F: NL Electric Block III Signal (Red)
-  672 sprites/gfx/nl.png 21 108 9 35 20 -9 -30
-  673 sprites/gfx/nl.png 42 108 9 35 20 -9 -30
-  674 sprites/gfx/nl.png 63 108 9 35 20 -9 -30
-  675 sprites/gfx/nl.png 84 108 9 35 20 -9 -30
-  676 sprites/gfx/nl.png 105 108 9 35 20 -9 -30
-  677 sprites/gfx/nl.png 126 108 9 35 20 -9 -30
-  678 sprites/gfx/nl.png 147 108 9 35 20 -9 -30
-  679 sprites/gfx/nl.png 00 144 9 35 20 -9 -30	//Set 10: NL Electric Block III Signal (Yellow)
-  680 sprites/gfx/nl.png 21 144 9 35 20 -9 -30
-  681 sprites/gfx/nl.png 42 144 9 35 20 -9 -30
-  682 sprites/gfx/nl.png 63 144 9 35 20 -9 -30
-  683 sprites/gfx/nl.png 84 144 9 35 20 -9 -30
-  684 sprites/gfx/nl.png 105 144 9 35 20 -9 -30
-  685 sprites/gfx/nl.png 126 144 9 35 20 -9 -30
-  686 sprites/gfx/nl.png 147 144 9 35 20 -9 -30
-  687 sprites/gfx/nl.png 00 180 9 35 20 -9 -30	//Set 11: NL Electric Block III Signal (Green)
-  688 sprites/gfx/nl.png 21 180 9 35 20 -9 -30
-  689 sprites/gfx/nl.png 42 180 9 35 20 -9 -30
-  690 sprites/gfx/nl.png 63 180 9 35 20 -9 -30
-  691 sprites/gfx/nl.png 84 180 9 35 20 -9 -30
-  692 sprites/gfx/nl.png 105 180 9 35 20 -9 -30
-  693 sprites/gfx/nl.png 126 180 9 35 20 -9 -30
-  694 sprites/gfx/nl.png 147 180 9 35 20 -9 -30
-  695 sprites/gfx/nl.png 00 108 9 35 20 -9 -30	//Set 12: NL Electric Path III Signal (Red)
-  696 sprites/gfx/nl.png 21 108 9 35 20 -9 -30
-  697 sprites/gfx/nl.png 42 108 9 35 20 -9 -30
-  698 sprites/gfx/nl.png 63 108 9 35 20 -9 -30
-  699 sprites/gfx/nl.png 84 108 9 35 20 -9 -30
-  700 sprites/gfx/nl.png 105 108 9 35 20 -9 -30
-  701 sprites/gfx/nl.png 126 108 9 35 20 -9 -30
-  702 sprites/gfx/nl.png 147 108 9 35 20 -9 -30
-  703 sprites/gfx/nl.png 00 144 9 35 20 -9 -30	//Set 13: NL Electric Path III Signal (Yellow)
-  704 sprites/gfx/nl.png 21 144 9 35 20 -9 -30
-  705 sprites/gfx/nl.png 42 144 9 35 20 -9 -30
-  706 sprites/gfx/nl.png 63 144 9 35 20 -9 -30
-  707 sprites/gfx/nl.png 84 144 9 35 20 -9 -30
-  708 sprites/gfx/nl.png 105 144 9 35 20 -9 -30
-  709 sprites/gfx/nl.png 126 144 9 35 20 -9 -30
-  710 sprites/gfx/nl.png 147 144 9 35 20 -9 -30
-  711 sprites/gfx/nl.png 00 180 9 35 20 -9 -30	//Set 14: NL Electric Path III Signal (Green)
-  712 sprites/gfx/nl.png 21 180 9 35 20 -9 -30
-  713 sprites/gfx/nl.png 42 180 9 35 20 -9 -30
-  714 sprites/gfx/nl.png 63 180 9 35 20 -9 -30
-  715 sprites/gfx/nl.png 84 180 9 35 20 -9 -30
-  716 sprites/gfx/nl.png 105 180 9 35 20 -9 -30
-  717 sprites/gfx/nl.png 126 180 9 35 20 -9 -30
-  718 sprites/gfx/nl.png 147 180 9 35 20 -9 -30
-  719 sprites/gfx/nl.png 00 108 9 35 20 -9 -30	//Set 15: NL Electric One-way Path III Signal (Red)
-  720 sprites/gfx/nl.png 21 108 9 35 20 -9 -30
-  721 sprites/gfx/nl.png 42 108 9 35 20 -9 -30
-  722 sprites/gfx/nl.png 63 108 9 35 20 -9 -30
-  723 sprites/gfx/nl.png 84 108 9 35 20 -9 -30
-  724 sprites/gfx/nl.png 105 108 9 35 20 -9 -30
-  725 sprites/gfx/nl.png 126 108 9 35 20 -9 -30
-  726 sprites/gfx/nl.png 147 108 9 35 20 -9 -30
-  727 sprites/gfx/nl.png 00 144 9 35 20 -9 -30	//Set 16: NL Electric One-way Path III Signal (Yellow)
-  728 sprites/gfx/nl.png 21 144 9 35 20 -9 -30
-  729 sprites/gfx/nl.png 42 144 9 35 20 -9 -30
-  730 sprites/gfx/nl.png 63 144 9 35 20 -9 -30
-  731 sprites/gfx/nl.png 84 144 9 35 20 -9 -30
-  732 sprites/gfx/nl.png 105 144 9 35 20 -9 -30
-  733 sprites/gfx/nl.png 126 144 9 35 20 -9 -30
-  734 sprites/gfx/nl.png 147 144 9 35 20 -9 -30
-  735 sprites/gfx/nl.png 00 180 9 35 20 -9 -30	//Set 17: NL Electric One-way Path III Signal (Green)
-  736 sprites/gfx/nl.png 21 180 9 35 20 -9 -30
-  737 sprites/gfx/nl.png 42 180 9 35 20 -9 -30
-  738 sprites/gfx/nl.png 63 180 9 35 20 -9 -30
-  739 sprites/gfx/nl.png 84 180 9 35 20 -9 -30
-  740 sprites/gfx/nl.png 105 180 9 35 20 -9 -30
-  741 sprites/gfx/nl.png 126 180 9 35 20 -9 -30
-  742 sprites/gfx/nl.png 147 180 9 35 20 -9 -30
-  743 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 18: NL Semaphore Repeater Block II Signal (Yellow)
-  744 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  745 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  746 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  747 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  748 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  749 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  750 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  751 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 19: NL Semaphore Repeater Block II Signal (Green)
-  752 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  753 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  754 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  755 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  756 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  757 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  758 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  759 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 1A: NL Semaphore Repeater Path II Signal (Yellow)
-  760 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  761 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  762 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  763 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  764 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  765 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  766 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
-  767 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 1B: NL Semaphore Repeater Path II Signal (Green)
-  768 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
-  769 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
-  770 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
-  771 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
-  772 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
-  773 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
-  774 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  549 sprites/gfx/nl.png 00 288 9 35 20 -9 -30	//Set 00: NL Semaphore Block II Signal (Red)
+  550 sprites/gfx/nl.png 21 288 9 35 20 -9 -30
+  551 sprites/gfx/nl.png 42 288 9 35 20 -9 -30
+  552 sprites/gfx/nl.png 63 288 9 35 20 -9 -30
+  553 sprites/gfx/nl.png 84 288 9 35 20 -9 -30
+  554 sprites/gfx/nl.png 105 288 9 35 20 -9 -30
+  555 sprites/gfx/nl.png 126 288 9 35 20 -9 -30
+  556 sprites/gfx/nl.png 147 288 9 35 20 -9 -30
+  557 sprites/gfx/nl.png 00 324 9 35 20 -9 -30	//Set 01: NL Semaphore Block II Signal (Green)
+  558 sprites/gfx/nl.png 21 324 9 35 20 -9 -30
+  559 sprites/gfx/nl.png 42 324 9 35 20 -9 -30
+  560 sprites/gfx/nl.png 63 324 9 35 20 -9 -30
+  561 sprites/gfx/nl.png 84 324 9 35 20 -9 -30
+  562 sprites/gfx/nl.png 105 324 9 35 20 -9 -30
+  563 sprites/gfx/nl.png 126 324 9 35 20 -9 -30
+  564 sprites/gfx/nl.png 147 324 9 35 20 -9 -30
+  565 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 02: NL Semaphore Path II Signal (Red)
+  566 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  567 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  568 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  569 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  570 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  571 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  572 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  573 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 03: NL Semaphore Path II Signal (Green)
+  574 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  575 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  576 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  577 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  578 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  579 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  580 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  581 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 04: NL Semaphore One-way Path II Signal (Red)
+  582 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  583 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  584 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  585 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  586 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  587 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  588 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  589 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 05: NL Semaphore One-way Path II Signal (Green)
+  590 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  591 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  592 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  593 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  594 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  595 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  596 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  597 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 06: NL Semaphore Block III Signal (Red)
+  598 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  599 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  600 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  601 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  602 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  603 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  604 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  605 sprites/gfx/nl.png 00 36 9 35 20 -9 -30	//Set 07: NL Semaphore Block III Signal (Yellow)
+  606 sprites/gfx/nl.png 21 36 9 35 20 -9 -30
+  607 sprites/gfx/nl.png 42 36 9 35 20 -9 -30
+  608 sprites/gfx/nl.png 63 36 9 35 20 -9 -30
+  609 sprites/gfx/nl.png 84 36 9 35 20 -9 -30
+  610 sprites/gfx/nl.png 105 36 9 35 20 -9 -30
+  611 sprites/gfx/nl.png 126 36 9 35 20 -9 -30
+  612 sprites/gfx/nl.png 147 36 9 35 20 -9 -30
+  613 sprites/gfx/nl.png 00 72 9 35 20 -9 -30	//Set 08: NL Semaphore Block III Signal (Green)
+  614 sprites/gfx/nl.png 21 72 9 35 20 -9 -30
+  615 sprites/gfx/nl.png 42 72 9 35 20 -9 -30
+  616 sprites/gfx/nl.png 63 72 9 35 20 -9 -30
+  617 sprites/gfx/nl.png 84 72 9 35 20 -9 -30
+  618 sprites/gfx/nl.png 105 72 9 35 20 -9 -30
+  619 sprites/gfx/nl.png 126 72 9 35 20 -9 -30
+  620 sprites/gfx/nl.png 147 72 9 35 20 -9 -30
+  621 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 09: NL Semaphore Path III Signal (Red)
+  622 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  623 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  624 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  625 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  626 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  627 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  628 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  629 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0A: NL Semaphore Path III Signal (Yellow)
+  630 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  631 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  632 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  633 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  634 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  635 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  636 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  637 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0B: NL Semaphore Path III Signal (Green)
+  638 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  639 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  640 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  641 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  642 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  643 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  644 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  645 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0C: NL Semaphore One-way Path III Signal (Red)
+  646 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  647 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  648 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  649 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  650 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  651 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  652 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  653 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0D: NL Semaphore One-way Path III Signal (Yellow)
+  654 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  655 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  656 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  657 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  658 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  659 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  660 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  661 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 0E: NL Semaphore One-way Path III Signal (Green)
+  662 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  663 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  664 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  665 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  666 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  667 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  668 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  669 sprites/gfx/nl.png 00 108 9 35 20 -9 -30	//Set 0F: NL Electric Block III Signal (Red)
+  670 sprites/gfx/nl.png 21 108 9 35 20 -9 -30
+  671 sprites/gfx/nl.png 42 108 9 35 20 -9 -30
+  672 sprites/gfx/nl.png 63 108 9 35 20 -9 -30
+  673 sprites/gfx/nl.png 84 108 9 35 20 -9 -30
+  674 sprites/gfx/nl.png 105 108 9 35 20 -9 -30
+  675 sprites/gfx/nl.png 126 108 9 35 20 -9 -30
+  676 sprites/gfx/nl.png 147 108 9 35 20 -9 -30
+  677 sprites/gfx/nl.png 00 144 9 35 20 -9 -30	//Set 10: NL Electric Block III Signal (Yellow)
+  678 sprites/gfx/nl.png 21 144 9 35 20 -9 -30
+  679 sprites/gfx/nl.png 42 144 9 35 20 -9 -30
+  680 sprites/gfx/nl.png 63 144 9 35 20 -9 -30
+  681 sprites/gfx/nl.png 84 144 9 35 20 -9 -30
+  682 sprites/gfx/nl.png 105 144 9 35 20 -9 -30
+  683 sprites/gfx/nl.png 126 144 9 35 20 -9 -30
+  684 sprites/gfx/nl.png 147 144 9 35 20 -9 -30
+  685 sprites/gfx/nl.png 00 180 9 35 20 -9 -30	//Set 11: NL Electric Block III Signal (Green)
+  686 sprites/gfx/nl.png 21 180 9 35 20 -9 -30
+  687 sprites/gfx/nl.png 42 180 9 35 20 -9 -30
+  688 sprites/gfx/nl.png 63 180 9 35 20 -9 -30
+  689 sprites/gfx/nl.png 84 180 9 35 20 -9 -30
+  690 sprites/gfx/nl.png 105 180 9 35 20 -9 -30
+  691 sprites/gfx/nl.png 126 180 9 35 20 -9 -30
+  692 sprites/gfx/nl.png 147 180 9 35 20 -9 -30
+  693 sprites/gfx/nl.png 00 108 9 35 20 -9 -30	//Set 12: NL Electric Path III Signal (Red)
+  694 sprites/gfx/nl.png 21 108 9 35 20 -9 -30
+  695 sprites/gfx/nl.png 42 108 9 35 20 -9 -30
+  696 sprites/gfx/nl.png 63 108 9 35 20 -9 -30
+  697 sprites/gfx/nl.png 84 108 9 35 20 -9 -30
+  698 sprites/gfx/nl.png 105 108 9 35 20 -9 -30
+  699 sprites/gfx/nl.png 126 108 9 35 20 -9 -30
+  700 sprites/gfx/nl.png 147 108 9 35 20 -9 -30
+  701 sprites/gfx/nl.png 00 144 9 35 20 -9 -30	//Set 13: NL Electric Path III Signal (Yellow)
+  702 sprites/gfx/nl.png 21 144 9 35 20 -9 -30
+  703 sprites/gfx/nl.png 42 144 9 35 20 -9 -30
+  704 sprites/gfx/nl.png 63 144 9 35 20 -9 -30
+  705 sprites/gfx/nl.png 84 144 9 35 20 -9 -30
+  706 sprites/gfx/nl.png 105 144 9 35 20 -9 -30
+  707 sprites/gfx/nl.png 126 144 9 35 20 -9 -30
+  708 sprites/gfx/nl.png 147 144 9 35 20 -9 -30
+  709 sprites/gfx/nl.png 00 180 9 35 20 -9 -30	//Set 14: NL Electric Path III Signal (Green)
+  710 sprites/gfx/nl.png 21 180 9 35 20 -9 -30
+  711 sprites/gfx/nl.png 42 180 9 35 20 -9 -30
+  712 sprites/gfx/nl.png 63 180 9 35 20 -9 -30
+  713 sprites/gfx/nl.png 84 180 9 35 20 -9 -30
+  714 sprites/gfx/nl.png 105 180 9 35 20 -9 -30
+  715 sprites/gfx/nl.png 126 180 9 35 20 -9 -30
+  716 sprites/gfx/nl.png 147 180 9 35 20 -9 -30
+  717 sprites/gfx/nl.png 00 108 9 35 20 -9 -30	//Set 15: NL Electric One-way Path III Signal (Red)
+  718 sprites/gfx/nl.png 21 108 9 35 20 -9 -30
+  719 sprites/gfx/nl.png 42 108 9 35 20 -9 -30
+  720 sprites/gfx/nl.png 63 108 9 35 20 -9 -30
+  721 sprites/gfx/nl.png 84 108 9 35 20 -9 -30
+  722 sprites/gfx/nl.png 105 108 9 35 20 -9 -30
+  723 sprites/gfx/nl.png 126 108 9 35 20 -9 -30
+  724 sprites/gfx/nl.png 147 108 9 35 20 -9 -30
+  725 sprites/gfx/nl.png 00 144 9 35 20 -9 -30	//Set 16: NL Electric One-way Path III Signal (Yellow)
+  726 sprites/gfx/nl.png 21 144 9 35 20 -9 -30
+  727 sprites/gfx/nl.png 42 144 9 35 20 -9 -30
+  728 sprites/gfx/nl.png 63 144 9 35 20 -9 -30
+  729 sprites/gfx/nl.png 84 144 9 35 20 -9 -30
+  730 sprites/gfx/nl.png 105 144 9 35 20 -9 -30
+  731 sprites/gfx/nl.png 126 144 9 35 20 -9 -30
+  732 sprites/gfx/nl.png 147 144 9 35 20 -9 -30
+  733 sprites/gfx/nl.png 00 180 9 35 20 -9 -30	//Set 17: NL Electric One-way Path III Signal (Green)
+  734 sprites/gfx/nl.png 21 180 9 35 20 -9 -30
+  735 sprites/gfx/nl.png 42 180 9 35 20 -9 -30
+  736 sprites/gfx/nl.png 63 180 9 35 20 -9 -30
+  737 sprites/gfx/nl.png 84 180 9 35 20 -9 -30
+  738 sprites/gfx/nl.png 105 180 9 35 20 -9 -30
+  739 sprites/gfx/nl.png 126 180 9 35 20 -9 -30
+  740 sprites/gfx/nl.png 147 180 9 35 20 -9 -30
+  741 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 18: NL Semaphore Repeater Block II Signal (Yellow)
+  742 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  743 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  744 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  745 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  746 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  747 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  748 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  749 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 19: NL Semaphore Repeater Block II Signal (Green)
+  750 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  751 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  752 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  753 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  754 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  755 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  756 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  757 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 1A: NL Semaphore Repeater Path II Signal (Yellow)
+  758 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  759 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  760 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  761 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  762 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  763 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  764 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
+  765 sprites/gfx/nl.png 00 0 9 35 20 -9 -30	//Set 1B: NL Semaphore Repeater Path II Signal (Green)
+  766 sprites/gfx/nl.png 21 0 9 35 20 -9 -30
+  767 sprites/gfx/nl.png 42 0 9 35 20 -9 -30
+  768 sprites/gfx/nl.png 63 0 9 35 20 -9 -30
+  769 sprites/gfx/nl.png 84 0 9 35 20 -9 -30
+  770 sprites/gfx/nl.png 105 0 9 35 20 -9 -30
+  771 sprites/gfx/nl.png 126 0 9 35 20 -9 -30
+  772 sprites/gfx/nl.png 147 0 9 35 20 -9 -30
 
-  775 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set 00: NL Semaphore Block II Signal (Red)
-  776 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set 01: NL Semaphore Block II Signal (Green)
-  777 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set 02: NL Semaphore Path II Signal (Red)
-  778 * 9	 02 0E 03 01 01 \wx3 \wx3		//Set 03: NL Semaphore Path II Signal (Green)
-  779 * 9	 02 0E 04 01 01 \wx4 \wx4		//Set 04: NL Semaphore One-way Path II Signal (Red)
-  780 * 9	 02 0E 05 01 01 \wx5 \wx5		//Set 05: NL Semaphore One-way Path II Signal (Green)
+  773 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set 00: NL Semaphore Block II Signal (Red)
+  774 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set 01: NL Semaphore Block II Signal (Green)
+  775 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set 02: NL Semaphore Path II Signal (Red)
+  776 * 9	 02 0E 03 01 01 \wx3 \wx3		//Set 03: NL Semaphore Path II Signal (Green)
+  777 * 9	 02 0E 04 01 01 \wx4 \wx4		//Set 04: NL Semaphore One-way Path II Signal (Red)
+  778 * 9	 02 0E 05 01 01 \wx5 \wx5		//Set 05: NL Semaphore One-way Path II Signal (Green)
 
-  781 * 23	 02 0E 06 89 			//Act 2, Feature 0E, ID 06, 1-byte variable 					NL Semaphore Block II Signal state VA2	20
+  779 * 23	 02 0E 06 89 			//Act 2, Feature 0E, ID 06, 1-byte variable 					NL Semaphore Block II Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			00 00 00 00 00 00 00 00 00 00
 			01 00
 
-  782 * 23	 02 0E 07 89 			//Act 2, Feature 0E, ID 07, 1-byte variable 					NL Semaphore Path II Signal state VA2	20
+  780 * 23	 02 0E 07 89 			//Act 2, Feature 0E, ID 07, 1-byte variable 					NL Semaphore Path II Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			02 00 00 00 00 00 00 00 00 00
 			03 00
 
-  783 * 23	 02 0E 08 89 			//Act 2, Feature 0E, ID 08, 1-byte variable 					NL Semaphore One-way Path II Signal state VA2	20
+  781 * 23	 02 0E 08 89 			//Act 2, Feature 0E, ID 08, 1-byte variable 					NL Semaphore One-way Path II Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			01						//1 range
 			04 00 00 00 00 00 00 00 00 00
 			05 00
 
-  784 * 33	 02 0E B0 89 			//Act 2, Feature 0E, ID B0, 1-byte variable 					NL Semaphore Signal II Type VA2	20
+  782 * 33	 02 0E B0 89 			//Act 2, Feature 0E, ID B0, 1-byte variable 					NL Semaphore Signal II Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			07 00 00 00 04 00 00 00 04 00
@@ -1230,101 +1228,101 @@
 
 
 
-  785 * 9	 02 0E 00 01 01 \wx6 \wx6		//Set 06: NL Semaphore Block III Signal (Red)
-  786 * 9	 02 0E 01 01 01 \wx7 \wx7		//Set 07: NL Semaphore Block III Signal (Yellow)
-  787 * 9	 02 0E 02 01 01 \wx8 \wx8		//Set 08: NL Semaphore Block III Signal (Green)
-  788 * 9	 02 0E 03 01 01 \wx9 \wx9		//Set 09: NL Semaphore Path III Signal (Red)
-  789 * 9	 02 0E 04 01 01 \wxA \wxA		//Set 0A: NL Semaphore Path III Signal (Yellow)
-  790 * 9	 02 0E 05 01 01 \wxB \wxB		//Set 0B: NL Semaphore Path III Signal (Green)
-  791 * 9	 02 0E 06 01 01 \wxC \wxC		//Set 0C: NL Semaphore One-way Path III Signal (Red)
-  792 * 9	 02 0E 07 01 01 \wxD \wxD		//Set 0D: NL Semaphore One-way Path III Signal (Yellow)
-  793 * 9	 02 0E 08 01 01 \wxE \wxE		//Set 0E: NL Semaphore One-way Path III Signal (Green)
-  794 * 9	 02 0E 09 01 01 \wxF \wxF		//Set 0F: NL Electric Block III Signal (Red)
-  795 * 9	 02 0E 0A 01 01 \wx10 \wx10		//Set 10: NL Electric Block III Signal (Yellow)
-  796 * 9	 02 0E 0B 01 01 \wx11 \wx11		//Set 11: NL Electric Block III Signal (Green)
-  797 * 9	 02 0E 0C 01 01 \wx12 \wx12		//Set 0F: NL Electric Block III Signal (Red)
-  798 * 9	 02 0E 0D 01 01 \wx13 \wx13		//Set 10: NL Electric Block III Signal (Yellow)
-  799 * 9	 02 0E 0E 01 01 \wx14 \wx14		//Set 11: NL Electric Block III Signal (Green)
-  800 * 9	 02 0E 0F 01 01 \wx15 \wx15		//Set 0F: NL Electric Block III Signal (Red)
-  801 * 9	 02 0E 10 01 01 \wx16 \wx16		//Set 10: NL Electric Block III Signal (Yellow)
-  802 * 9	 02 0E 11 01 01 \wx17 \wx17		//Set 11: NL Electric Block III Signal (Green)
+  783 * 9	 02 0E 00 01 01 \wx6 \wx6		//Set 06: NL Semaphore Block III Signal (Red)
+  784 * 9	 02 0E 01 01 01 \wx7 \wx7		//Set 07: NL Semaphore Block III Signal (Yellow)
+  785 * 9	 02 0E 02 01 01 \wx8 \wx8		//Set 08: NL Semaphore Block III Signal (Green)
+  786 * 9	 02 0E 03 01 01 \wx9 \wx9		//Set 09: NL Semaphore Path III Signal (Red)
+  787 * 9	 02 0E 04 01 01 \wxA \wxA		//Set 0A: NL Semaphore Path III Signal (Yellow)
+  788 * 9	 02 0E 05 01 01 \wxB \wxB		//Set 0B: NL Semaphore Path III Signal (Green)
+  789 * 9	 02 0E 06 01 01 \wxC \wxC		//Set 0C: NL Semaphore One-way Path III Signal (Red)
+  790 * 9	 02 0E 07 01 01 \wxD \wxD		//Set 0D: NL Semaphore One-way Path III Signal (Yellow)
+  791 * 9	 02 0E 08 01 01 \wxE \wxE		//Set 0E: NL Semaphore One-way Path III Signal (Green)
+  792 * 9	 02 0E 09 01 01 \wxF \wxF		//Set 0F: NL Electric Block III Signal (Red)
+  793 * 9	 02 0E 0A 01 01 \wx10 \wx10		//Set 10: NL Electric Block III Signal (Yellow)
+  794 * 9	 02 0E 0B 01 01 \wx11 \wx11		//Set 11: NL Electric Block III Signal (Green)
+  795 * 9	 02 0E 0C 01 01 \wx12 \wx12		//Set 0F: NL Electric Block III Signal (Red)
+  796 * 9	 02 0E 0D 01 01 \wx13 \wx13		//Set 10: NL Electric Block III Signal (Yellow)
+  797 * 9	 02 0E 0E 01 01 \wx14 \wx14		//Set 11: NL Electric Block III Signal (Green)
+  798 * 9	 02 0E 0F 01 01 \wx15 \wx15		//Set 0F: NL Electric Block III Signal (Red)
+  799 * 9	 02 0E 10 01 01 \wx16 \wx16		//Set 10: NL Electric Block III Signal (Yellow)
+  800 * 9	 02 0E 11 01 01 \wx17 \wx17		//Set 11: NL Electric Block III Signal (Green)
 
-  803 * 33	 02 0E 12 89 			//Act 2, Feature 0E, ID 12, 1-byte variable 					NL Semaphore Block III Signal state VA2	20
+  801 * 33	 02 0E 12 89 			//Act 2, Feature 0E, ID 12, 1-byte variable 					NL Semaphore Block III Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			00 00 00 00 00 00 00 00 00 00
 			01 00 02 00 00 00 02 00 00 00
 			02 00
 
-  804 * 33	 02 0E 13 89 			//Act 2, Feature 0E, ID 13, 1-byte variable 					NL Semaphore Path III Signal state VA2	20
+  802 * 33	 02 0E 13 89 			//Act 2, Feature 0E, ID 13, 1-byte variable 					NL Semaphore Path III Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			03 00 00 00 00 00 00 00 00 00
 			04 00 02 00 00 00 02 00 00 00
 			05 00
 
-  805 * 33	 02 0E 14 89 			//Act 2, Feature 0E, ID 14, 1-byte variable 					NL Semaphore One-way Path III Signal state VA2	20
+  803 * 33	 02 0E 14 89 			//Act 2, Feature 0E, ID 14, 1-byte variable 					NL Semaphore One-way Path III Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			06 00 00 00 00 00 00 00 00 00
 			07 00 02 00 00 00 02 00 00 00
 			08 00
 
-  806 * 33	 02 0E 15 89 			//Act 2, Feature 0E, ID 15, 1-byte variable 					NL Semaphore Signal III Type VA2	20
+  804 * 33	 02 0E 15 89 			//Act 2, Feature 0E, ID 15, 1-byte variable 					NL Semaphore Signal III Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 00 FF 00
 			02						//2 ranges
 			13 00 00 00 04 00 00 00 04 00
 			14 00 00 00 05 00 00 00 05 00
 			12 00
 
-  807 * 33	 02 0E 16 89 			//Act 2, Feature 0E, ID 12, 1-byte variable 					NL Electric Block III Signal state VA2	20
+  805 * 33	 02 0E 16 89 			//Act 2, Feature 0E, ID 12, 1-byte variable 					NL Electric Block III Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			09 00 00 00 00 00 00 00 00 00
 			0A 00 02 00 00 00 02 00 00 00
 			0B 00
 
-  808 * 33	 02 0E 17 89 			//Act 2, Feature 0E, ID 13, 1-byte variable 					NL Electric Path III Signal state VA2	20
+  806 * 33	 02 0E 17 89 			//Act 2, Feature 0E, ID 13, 1-byte variable 					NL Electric Path III Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			0C 00 00 00 00 00 00 00 00 00
 			0D 00 02 00 00 00 02 00 00 00
 			0E 00
 
-  809 * 33	 02 0E 18 89 			//Act 2, Feature 0E, ID 14, 1-byte variable 					NL Electric One-way Path III Signal state VA2	20
+  807 * 33	 02 0E 18 89 			//Act 2, Feature 0E, ID 14, 1-byte variable 					NL Electric One-way Path III Signal state VA2	20
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			0F 00 00 00 00 00 00 00 00 00
 			10 00 02 00 00 00 02 00 00 00
 			11 00
 
-  810 * 33	 02 0E 19 89 			//Act 2, Feature 0E, ID 15, 1-byte variable 					NL Electric Signal III Type VA2	20
+  808 * 33	 02 0E 19 89 			//Act 2, Feature 0E, ID 15, 1-byte variable 					NL Electric Signal III Type VA2	20
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			02						//2 ranges
 			17 00 00 00 04 00 00 00 04 00
 			18 00 00 00 05 00 00 00 05 00
 			16 00
 
-  811 * 23	 02 0E B1 89 			//Act 2, Feature 0E, ID A4, 1-byte variable 					NL Signal III Semaphore/Electric VA2	2E
+  809 * 23	 02 0E B1 89 			//Act 2, Feature 0E, ID A4, 1-byte variable 					NL Signal III Semaphore/Electric VA2	2E
 			18 00 00 FF 00 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			15 00 00 01 00 00 00 01 00 00
 			19 00
 
 
-  812 * 9	 02 0E 00 01 01 \wx18 \wx18		//Set 12: NL Semaphore Repeater Block II Signal (Yellow)
-  813 * 9	 02 0E 01 01 01 \wx19 \wx19		//Set 13: NL Semaphore Repeater Block II Signal (Green)
-  814 * 9	 02 0E 02 01 01 \wx1A \wx1A		//Set 14: NL Semaphore Repeater Path II Signal (Yellow)
-  815 * 9	 02 0E 03 01 01 \wx1B \wx1B		//Set 15: NL Semaphore Repeater Path II Signal (Green)
+  810 * 9	 02 0E 00 01 01 \wx18 \wx18		//Set 12: NL Semaphore Repeater Block II Signal (Yellow)
+  811 * 9	 02 0E 01 01 01 \wx19 \wx19		//Set 13: NL Semaphore Repeater Block II Signal (Green)
+  812 * 9	 02 0E 02 01 01 \wx1A \wx1A		//Set 14: NL Semaphore Repeater Path II Signal (Yellow)
+  813 * 9	 02 0E 03 01 01 \wx1B \wx1B		//Set 15: NL Semaphore Repeater Path II Signal (Green)
 
-  816 * 33	 02 0E 04 89 			//Act 2, Feature 0E, ID 04, 1-byte variable 					NL Semaphore Block Repeater II state VA2
+  814 * 33	 02 0E 04 89 			//Act 2, Feature 0E, ID 04, 1-byte variable 					NL Semaphore Block Repeater II state VA2
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			00 00 00 00 00 00 00 00 00 00
 			00 00 02 00 00 00 02 00 00 00
 			01 00
 
-  817 * 33	 02 0E 05 89 			//Act 2, Feature 0E, ID 05, 1-byte variable 					NL Semaphore Path Repeater II state VA2
+  815 * 33	 02 0E 05 89 			//Act 2, Feature 0E, ID 05, 1-byte variable 					NL Semaphore Path Repeater II state VA2
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			02 00 00 00 00 00 00 00 00 00
@@ -1332,162 +1330,162 @@
 			03 00
 
 
-  818 * 23	 02 0E B2 89 			//Act 2, Feature 0E, ID B2, 1-byte variable 					NL Signal Repeater Semaphore Type VA2	20
+  816 * 23	 02 0E B2 89 			//Act 2, Feature 0E, ID B2, 1-byte variable 					NL Signal Repeater Semaphore Type VA2	20
 			20 00 00 00 FF 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//1 range
 			05 00 \dx400 \dx400
 			04 00
 
 //!!Error (44): Invalid feature byte.
-  819 * 4	 01 0E 09 08		
+  817 * 4	 01 0E 09 08		
 
-  820 sprites/gfx/fr.png 00 108 9 35 20 -9 -30
-  821 sprites/gfx/fr.png 21 108 9 35 20 -9 -30
-  822 sprites/gfx/fr.png 42 108 9 35 20 -9 -30
-  823 sprites/gfx/fr.png 63 108 9 35 20 -9 -30
-  824 sprites/gfx/fr.png 84 108 9 35 20 -9 -30
-  825 sprites/gfx/fr.png 105 108 9 35 20 -9 -30
-  826 sprites/gfx/fr.png 126 108 9 35 20 -9 -30
-  827 sprites/gfx/fr.png 147 108 9 35 20 -9 -30
-  828 sprites/gfx/fr.png 00 144 9 35 20 -9 -30
-  829 sprites/gfx/fr.png 21 144 9 35 20 -9 -30
-  830 sprites/gfx/fr.png 42 144 9 35 20 -9 -30
-  831 sprites/gfx/fr.png 63 144 9 35 20 -9 -30
-  832 sprites/gfx/fr.png 84 144 9 35 20 -9 -30
-  833 sprites/gfx/fr.png 105 144 9 35 20 -9 -30
-  834 sprites/gfx/fr.png 126 144 9 35 20 -9 -30
-  835 sprites/gfx/fr.png 147 144 9 35 20 -9 -30
-  836 sprites/gfx/fr.png 00 180 9 35 20 -9 -30
-  837 sprites/gfx/fr.png 21 180 9 35 20 -9 -30
-  838 sprites/gfx/fr.png 42 180 9 35 20 -9 -30
-  839 sprites/gfx/fr.png 63 180 9 35 20 -9 -30
-  840 sprites/gfx/fr.png 84 180 9 35 20 -9 -30
-  841 sprites/gfx/fr.png 105 180 9 35 20 -9 -30
-  842 sprites/gfx/fr.png 126 180 9 35 20 -9 -30
-  843 sprites/gfx/fr.png 147 180 9 35 20 -9 -30
-  844 sprites/gfx/fr.png 200 00 9 35 20 -9 -30
-  845 sprites/gfx/fr.png 221 00 9 35 20 -9 -30
-  846 sprites/gfx/fr.png 242 00 9 35 20 -9 -30
-  847 sprites/gfx/fr.png 263 00 9 35 20 -9 -30
-  848 sprites/gfx/fr.png 284 00 9 35 20 -9 -30
-  849 sprites/gfx/fr.png 305 00 9 35 20 -9 -30
-  850 sprites/gfx/fr.png 326 00 9 35 20 -9 -30
-  851 sprites/gfx/fr.png 347 00 9 35 20 -9 -30	
-  852 sprites/gfx/fr.png 200 36 9 35 20 -9 -30
-  853 sprites/gfx/fr.png 221 36 9 35 20 -9 -30
-  854 sprites/gfx/fr.png 242 36 9 35 20 -9 -30
-  855 sprites/gfx/fr.png 263 36 9 35 20 -9 -30
-  856 sprites/gfx/fr.png 284 36 9 35 20 -9 -30
-  857 sprites/gfx/fr.png 305 36 9 35 20 -9 -30
-  858 sprites/gfx/fr.png 326 36 9 35 20 -9 -30
-  859 sprites/gfx/fr.png 347 36 9 35 20 -9 -30
-  860 sprites/gfx/fr.png 200 72 9 35 20 -9 -30
-  861 sprites/gfx/fr.png 221 72 9 35 20 -9 -30
-  862 sprites/gfx/fr.png 242 72 9 35 20 -9 -30
-  863 sprites/gfx/fr.png 263 72 9 35 20 -9 -30
-  864 sprites/gfx/fr.png 284 72 9 35 20 -9 -30
-  865 sprites/gfx/fr.png 305 72 9 35 20 -9 -30
-  866 sprites/gfx/fr.png 326 72 9 35 20 -9 -30
-  867 sprites/gfx/fr.png 347 72 9 35 20 -9 -30
-  868 sprites/gfx/fr.png 200 108 9 35 20 -9 -30
-  869 sprites/gfx/fr.png 221 108 9 35 20 -9 -30
-  870 sprites/gfx/fr.png 242 108 9 35 20 -9 -30
-  871 sprites/gfx/fr.png 263 108 9 35 20 -9 -30
-  872 sprites/gfx/fr.png 284 108 9 35 20 -9 -30
-  873 sprites/gfx/fr.png 305 108 9 35 20 -9 -30
-  874 sprites/gfx/fr.png 326 108 9 35 20 -9 -30
-  875 sprites/gfx/fr.png 347 108 9 35 20 -9 -30
-  876 sprites/gfx/fr.png 200 144 9 35 20 -9 -30
-  877 sprites/gfx/fr.png 221 144 9 35 20 -9 -30
-  878 sprites/gfx/fr.png 242 144 9 35 20 -9 -30
-  879 sprites/gfx/fr.png 263 144 9 35 20 -9 -30
-  880 sprites/gfx/fr.png 284 144 9 35 20 -9 -30
-  881 sprites/gfx/fr.png 305 144 9 35 20 -9 -30
-  882 sprites/gfx/fr.png 326 144 9 35 20 -9 -30
-  883 sprites/gfx/fr.png 347 144 9 35 20 -9 -30
-  884 sprites/gfx/fr.png 200 180 9 35 20 -9 -30
-  885 sprites/gfx/fr.png 221 180 9 35 20 -9 -30
-  886 sprites/gfx/fr.png 242 180 9 35 20 -9 -30
-  887 sprites/gfx/fr.png 263 180 9 35 20 -9 -30
-  888 sprites/gfx/fr.png 284 180 9 35 20 -9 -30
-  889 sprites/gfx/fr.png 305 180 9 35 20 -9 -30
-  890 sprites/gfx/fr.png 326 180 9 35 20 -9 -30
-  891 sprites/gfx/fr.png 347 180 9 35 20 -9 -30
-  892 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set 50: FR Electric Block Signal (Red)
-  893 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set 51: FR Electric Block Signal (Yellow)
-  894 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set 52: FR Electric Block Signal (Green)
-  895 * 9	 02 0E 03 01 01 \wx3 \wx3		//Set 53: FR Semaphore Path Signal (Red)
-  896 * 9	 02 0E 04 01 01 \wx4 \wx4		//Set 54: FR Semaphore Path Signal (Yellow)
-  897 * 9	 02 0E 05 01 01 \wx5 \wx5		//Set 55: FR Semaphore Path Signal (Green)
-  898 * 9	 02 0E 06 01 01 \wx6 \wx6		//Set 56: FR Electric Path Signal (Red)
-  899 * 9	 02 0E 07 01 01 \wx7 \wx7		//Set 57: FR Electric Path Signal (Yellow)
-  900 * 9	 02 0E 08 01 01 \wx8 \wx8		//Set 58: FR Electric Path Signal (Green)
+  818 sprites/gfx/fr.png 00 108 9 35 20 -9 -30
+  819 sprites/gfx/fr.png 21 108 9 35 20 -9 -30
+  820 sprites/gfx/fr.png 42 108 9 35 20 -9 -30
+  821 sprites/gfx/fr.png 63 108 9 35 20 -9 -30
+  822 sprites/gfx/fr.png 84 108 9 35 20 -9 -30
+  823 sprites/gfx/fr.png 105 108 9 35 20 -9 -30
+  824 sprites/gfx/fr.png 126 108 9 35 20 -9 -30
+  825 sprites/gfx/fr.png 147 108 9 35 20 -9 -30
+  826 sprites/gfx/fr.png 00 144 9 35 20 -9 -30
+  827 sprites/gfx/fr.png 21 144 9 35 20 -9 -30
+  828 sprites/gfx/fr.png 42 144 9 35 20 -9 -30
+  829 sprites/gfx/fr.png 63 144 9 35 20 -9 -30
+  830 sprites/gfx/fr.png 84 144 9 35 20 -9 -30
+  831 sprites/gfx/fr.png 105 144 9 35 20 -9 -30
+  832 sprites/gfx/fr.png 126 144 9 35 20 -9 -30
+  833 sprites/gfx/fr.png 147 144 9 35 20 -9 -30
+  834 sprites/gfx/fr.png 00 180 9 35 20 -9 -30
+  835 sprites/gfx/fr.png 21 180 9 35 20 -9 -30
+  836 sprites/gfx/fr.png 42 180 9 35 20 -9 -30
+  837 sprites/gfx/fr.png 63 180 9 35 20 -9 -30
+  838 sprites/gfx/fr.png 84 180 9 35 20 -9 -30
+  839 sprites/gfx/fr.png 105 180 9 35 20 -9 -30
+  840 sprites/gfx/fr.png 126 180 9 35 20 -9 -30
+  841 sprites/gfx/fr.png 147 180 9 35 20 -9 -30
+  842 sprites/gfx/fr.png 200 00 9 35 20 -9 -30
+  843 sprites/gfx/fr.png 221 00 9 35 20 -9 -30
+  844 sprites/gfx/fr.png 242 00 9 35 20 -9 -30
+  845 sprites/gfx/fr.png 263 00 9 35 20 -9 -30
+  846 sprites/gfx/fr.png 284 00 9 35 20 -9 -30
+  847 sprites/gfx/fr.png 305 00 9 35 20 -9 -30
+  848 sprites/gfx/fr.png 326 00 9 35 20 -9 -30
+  849 sprites/gfx/fr.png 347 00 9 35 20 -9 -30	
+  850 sprites/gfx/fr.png 200 36 9 35 20 -9 -30
+  851 sprites/gfx/fr.png 221 36 9 35 20 -9 -30
+  852 sprites/gfx/fr.png 242 36 9 35 20 -9 -30
+  853 sprites/gfx/fr.png 263 36 9 35 20 -9 -30
+  854 sprites/gfx/fr.png 284 36 9 35 20 -9 -30
+  855 sprites/gfx/fr.png 305 36 9 35 20 -9 -30
+  856 sprites/gfx/fr.png 326 36 9 35 20 -9 -30
+  857 sprites/gfx/fr.png 347 36 9 35 20 -9 -30
+  858 sprites/gfx/fr.png 200 72 9 35 20 -9 -30
+  859 sprites/gfx/fr.png 221 72 9 35 20 -9 -30
+  860 sprites/gfx/fr.png 242 72 9 35 20 -9 -30
+  861 sprites/gfx/fr.png 263 72 9 35 20 -9 -30
+  862 sprites/gfx/fr.png 284 72 9 35 20 -9 -30
+  863 sprites/gfx/fr.png 305 72 9 35 20 -9 -30
+  864 sprites/gfx/fr.png 326 72 9 35 20 -9 -30
+  865 sprites/gfx/fr.png 347 72 9 35 20 -9 -30
+  866 sprites/gfx/fr.png 200 108 9 35 20 -9 -30
+  867 sprites/gfx/fr.png 221 108 9 35 20 -9 -30
+  868 sprites/gfx/fr.png 242 108 9 35 20 -9 -30
+  869 sprites/gfx/fr.png 263 108 9 35 20 -9 -30
+  870 sprites/gfx/fr.png 284 108 9 35 20 -9 -30
+  871 sprites/gfx/fr.png 305 108 9 35 20 -9 -30
+  872 sprites/gfx/fr.png 326 108 9 35 20 -9 -30
+  873 sprites/gfx/fr.png 347 108 9 35 20 -9 -30
+  874 sprites/gfx/fr.png 200 144 9 35 20 -9 -30
+  875 sprites/gfx/fr.png 221 144 9 35 20 -9 -30
+  876 sprites/gfx/fr.png 242 144 9 35 20 -9 -30
+  877 sprites/gfx/fr.png 263 144 9 35 20 -9 -30
+  878 sprites/gfx/fr.png 284 144 9 35 20 -9 -30
+  879 sprites/gfx/fr.png 305 144 9 35 20 -9 -30
+  880 sprites/gfx/fr.png 326 144 9 35 20 -9 -30
+  881 sprites/gfx/fr.png 347 144 9 35 20 -9 -30
+  882 sprites/gfx/fr.png 200 180 9 35 20 -9 -30
+  883 sprites/gfx/fr.png 221 180 9 35 20 -9 -30
+  884 sprites/gfx/fr.png 242 180 9 35 20 -9 -30
+  885 sprites/gfx/fr.png 263 180 9 35 20 -9 -30
+  886 sprites/gfx/fr.png 284 180 9 35 20 -9 -30
+  887 sprites/gfx/fr.png 305 180 9 35 20 -9 -30
+  888 sprites/gfx/fr.png 326 180 9 35 20 -9 -30
+  889 sprites/gfx/fr.png 347 180 9 35 20 -9 -30
+  890 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set 50: FR Electric Block Signal (Red)
+  891 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set 51: FR Electric Block Signal (Yellow)
+  892 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set 52: FR Electric Block Signal (Green)
+  893 * 9	 02 0E 03 01 01 \wx3 \wx3		//Set 53: FR Semaphore Path Signal (Red)
+  894 * 9	 02 0E 04 01 01 \wx4 \wx4		//Set 54: FR Semaphore Path Signal (Yellow)
+  895 * 9	 02 0E 05 01 01 \wx5 \wx5		//Set 55: FR Semaphore Path Signal (Green)
+  896 * 9	 02 0E 06 01 01 \wx6 \wx6		//Set 56: FR Electric Path Signal (Red)
+  897 * 9	 02 0E 07 01 01 \wx7 \wx7		//Set 57: FR Electric Path Signal (Yellow)
+  898 * 9	 02 0E 08 01 01 \wx8 \wx8		//Set 58: FR Electric Path Signal (Green)
 
-  901 * 33	 02 0E 09 89 			//Act 2, Feature 0E, ID 09, 1-byte variable 					FR Electric Block Signal III state VA2
+  899 * 33	 02 0E 09 89 			//Act 2, Feature 0E, ID 09, 1-byte variable 					FR Electric Block Signal III state VA2
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			00 00 00 00 00 00 00 00 00 00
 			01 00 02 00 00 00 02 00 00 00
 			02 00
 
-  902 * 33	 02 0E 0A 89 			//Act 2, Feature 0E, ID 0A, 1-byte variable 					FR Semaphore Path Signal III state VA2
+  900 * 33	 02 0E 0A 89 			//Act 2, Feature 0E, ID 0A, 1-byte variable 					FR Semaphore Path Signal III state VA2
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			03 00 00 00 00 00 00 00 00 00
 			04 00 02 00 00 00 02 00 00 00
 			05 00
 
-  903 * 33	 02 0E 0B 89 			//Act 2, Feature 0E, ID 0B, 1-byte variable 					FR Electric Path Signal III state VA2
+  901 * 33	 02 0E 0B 89 			//Act 2, Feature 0E, ID 0B, 1-byte variable 					FR Electric Path Signal III state VA2
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			06 00 00 00 00 00 00 00 00 00
 			07 00 02 00 00 00 02 00 00 00
 			08 00
 
-  904 * 23	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					FR Path Signal III Sema/Elec VA2
+  902 * 23	 02 0E 0C 89 			//Act 2, Feature 0E, ID 0C, 1-byte variable 					FR Path Signal III Sema/Elec VA2
 			18 00 00 FF 00 00				//Var 18, shift 00, mask 00 FF FF 00
 			01						//2 ranges
 			0A 00 00 01 00 00 00 01 00 00
 			0B 00
 
-  905 * 23	 02 0E C0 89 			//Act 2, Feature 0E, ID C0, 1-byte variable 					FR Signal Type VA2
+  903 * 23	 02 0E C0 89 			//Act 2, Feature 0E, ID C0, 1-byte variable 					FR Signal Type VA2
 			18 00 00 00 FF 00				//Var 18, shift 00, mask 00 00 FF 00
 			01						//2 ranges
 			0C 00 00 00 04 00 00 00 04 00
 			09 00
 
 //!!Error (44): Invalid feature byte.
-  906 * 4	 01 0E 03 08
+  904 * 4	 01 0E 03 08
 
-  907 sprites/gfx/hs.png 00 00 9 35 20 -9 -30
-  908 sprites/gfx/hs.png 21 00 9 35 20 -9 -30
-  909 sprites/gfx/hs.png 42 00 9 35 20 -9 -30
-  910 sprites/gfx/hs.png 63 00 9 35 20 -9 -30
-  911 sprites/gfx/hs.png 84 00 9 35 20 -9 -30
-  912 sprites/gfx/hs.png 105 00 9 35 20 -9 -30
-  913 sprites/gfx/hs.png 126 00 9 35 20 -9 -30
-  914 sprites/gfx/hs.png 147 00 9 35 20 -9 -30	
-  915 sprites/gfx/hs.png 00 36 9 35 20 -9 -30
-  916 sprites/gfx/hs.png 21 36 9 35 20 -9 -30
-  917 sprites/gfx/hs.png 42 36 9 35 20 -9 -30
-  918 sprites/gfx/hs.png 63 36 9 35 20 -9 -30
-  919 sprites/gfx/hs.png 84 36 9 35 20 -9 -30
-  920 sprites/gfx/hs.png 105 36 9 35 20 -9 -30
-  921 sprites/gfx/hs.png 126 36 9 35 20 -9 -30
-  922 sprites/gfx/hs.png 147 36 9 35 20 -9 -30
-  923 sprites/gfx/hs.png 00 72 9 35 20 -9 -30
-  924 sprites/gfx/hs.png 21 72 9 35 20 -9 -30
-  925 sprites/gfx/hs.png 42 72 9 35 20 -9 -30
-  926 sprites/gfx/hs.png 63 72 9 35 20 -9 -30
-  927 sprites/gfx/hs.png 84 72 9 35 20 -9 -30
-  928 sprites/gfx/hs.png 105 72 9 35 20 -9 -30
-  929 sprites/gfx/hs.png 126 72 9 35 20 -9 -30
-  930 sprites/gfx/hs.png 147 72 9 35 20 -9 -30
-  931 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set F0: HS Electric Block Signal (Red)
-  932 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set F1: HS Electric Block Signal (Yellow)
-  933 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set F2: HS Electric Block Signal (Green)
+  905 sprites/gfx/hs.png 00 00 9 35 20 -9 -30
+  906 sprites/gfx/hs.png 21 00 9 35 20 -9 -30
+  907 sprites/gfx/hs.png 42 00 9 35 20 -9 -30
+  908 sprites/gfx/hs.png 63 00 9 35 20 -9 -30
+  909 sprites/gfx/hs.png 84 00 9 35 20 -9 -30
+  910 sprites/gfx/hs.png 105 00 9 35 20 -9 -30
+  911 sprites/gfx/hs.png 126 00 9 35 20 -9 -30
+  912 sprites/gfx/hs.png 147 00 9 35 20 -9 -30	
+  913 sprites/gfx/hs.png 00 36 9 35 20 -9 -30
+  914 sprites/gfx/hs.png 21 36 9 35 20 -9 -30
+  915 sprites/gfx/hs.png 42 36 9 35 20 -9 -30
+  916 sprites/gfx/hs.png 63 36 9 35 20 -9 -30
+  917 sprites/gfx/hs.png 84 36 9 35 20 -9 -30
+  918 sprites/gfx/hs.png 105 36 9 35 20 -9 -30
+  919 sprites/gfx/hs.png 126 36 9 35 20 -9 -30
+  920 sprites/gfx/hs.png 147 36 9 35 20 -9 -30
+  921 sprites/gfx/hs.png 00 72 9 35 20 -9 -30
+  922 sprites/gfx/hs.png 21 72 9 35 20 -9 -30
+  923 sprites/gfx/hs.png 42 72 9 35 20 -9 -30
+  924 sprites/gfx/hs.png 63 72 9 35 20 -9 -30
+  925 sprites/gfx/hs.png 84 72 9 35 20 -9 -30
+  926 sprites/gfx/hs.png 105 72 9 35 20 -9 -30
+  927 sprites/gfx/hs.png 126 72 9 35 20 -9 -30
+  928 sprites/gfx/hs.png 147 72 9 35 20 -9 -30
+  929 * 9	 02 0E 00 01 01 \wx0 \wx0		//Set F0: HS Electric Block Signal (Red)
+  930 * 9	 02 0E 01 01 01 \wx1 \wx1		//Set F1: HS Electric Block Signal (Yellow)
+  931 * 9	 02 0E 02 01 01 \wx2 \wx2		//Set F2: HS Electric Block Signal (Green)
 
-  934 * 33	 02 0E F0 89 			//Act 2, Feature 0E, ID 40, 1-byte variable 					HS Electric Block Signal VIII state VA2
+  932 * 33	 02 0E F0 89 			//Act 2, Feature 0E, ID 40, 1-byte variable 					HS Electric Block Signal VIII state VA2
 			18 00 FF 00 00 00				//Var 18, shift 00, mask FF 00 00 00 (first byte only)
 			02						//2 ranges
 			00 00 00 00 00 00 00 00 00 00
@@ -1496,7 +1494,7 @@
 
 //!!Warning (86): Offset 4: Testing nonexistant variable 11.
 //!!Warning (194): Offset 6: Anding with 0.
-  935 * 83	 02 0E F8 89 11 00 00 00 00 00 07  //WE Signal Style group
+  933 * 83	 02 0E F8 89 11 00 00 00 00 00 07  //WE Signal Style group
 			A1 00 \dx1 \dx1		//UK 3 Aspect
 			A3 00 \dx2 \dx2		//UK Repeaters
 			B0 00 \dx3 \dx3		//NL 2 Aspect
@@ -1514,7 +1512,7 @@
 			A0 00				//UK 2 Aspect
 //!!Warning (86): Offset 4: Testing nonexistant variable 11.
 //!!Warning (194): Offset 6: Anding with 0.
-  936 * 63	 02 0E F9 89 11 00 00 00 00 00 05  //UK Signal Style group
+  934 * 63	 02 0E F9 89 11 00 00 00 00 00 05  //UK Signal Style group
 			A1 00 \dx1 \dx1		//UK 3 Aspect
 			A2 00 \dx2 \dx2		//UK 4 Aspect
 			A3 00 \dx3 \dx3		//UK Repeaters
@@ -1526,7 +1524,7 @@
 
 //!!Warning (86): Offset 4: Testing nonexistant variable 11.
 //!!Warning (194): Offset 6: Anding with 0.
-  937 * 63	 02 0E FA 89 11 00 00 00 00 00 05  //NL Signal Style group
+  935 * 63	 02 0E FA 89 11 00 00 00 00 00 05  //NL Signal Style group
 			B0 00 \dx1 \dx1		//NL 3 Aspect
 			B1 00 \dx2 \dx2		//NL Repeaters
 			A3 00 \dx3 \dx3		//NL Electric Gantry
@@ -1536,20 +1534,20 @@
 			F0 00 \dxD \dxD		//ETCS
 			A0 00				//NL 2 Aspect
 
-  938 * 6	 07 00 01 03 00 03
+  936 * 6	 07 00 01 03 00 03
 
-  939 * 17	 06
+  937 * 17	 06
   02 01 25
   02 01 44
   02 01 69
-  03 01 88
-  03 01 A4
+  03 01 85
+  03 01 9E
    FF
 
 
 //WE A0+A3
 //!!Fatal Error (44): Invalid feature byte.
-  940 * 393	 00 0E 5F 01 FF 00 00 
+  938 * 187	 00 0E 5F 01 FF 00 00 
    AB 01 06  					//Extra Aspects
 
    A7 01 00 					//Define Style //UK 2		8 props
@@ -1581,77 +1579,19 @@
    B4 01 00 					//Signal Wrong Side (offset 0x69)
    B5 01 01 					//New Signals "flag"
 
-   A7 01 03 					//Define Style //NL 2		8 props
-   AC 02 03 DC					//Style Name
-   AA 01 01  					//Restricted Signals
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 01 00 00 00 			//Semaphore Enabled
-   B1 01 01 					//Look Ahead Aspects
-   B4 01 00 					//Signal Wrong Side (offset 0x88)
-   B5 01 01 					//New Signals "flag"
-
    A7 01 04 					//Define Style //NL 3		7 props
    AC 02 04 DC					//Style Name
    AD 04 01 00 00 00  			//Electric Enabled
    AE 04 01 00 00 00 			//Semaphore Enabled
    B1 01 01 					//Look Ahead Aspects
-   B4 01 00 					//Signal Wrong Side (offset 0xA4)
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 05 					//Define Style //NL R		6 props
-   AC 02 05 DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side (offset 0xC6)
+   B4 01 00 					//Signal Wrong Side (offset 0x85)
    B5 01 01 					//New Signals "flag"
 
    A7 01 06 					//Define Style //FR 3		6 props
    AC 02 06 DC					//Style Name
    AD 04 11 00 00 00  			//Electric Enabled
    AE 04 10 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side (offset 0xDF)
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 07 					//Define Style //FR R		6 props
-   AC 02 07 DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 08 					//Define Style //BG 3		6 props
-   AC 02 08 DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 09 					//Define Style //BG R		6 props
-   AC 02 09 DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 0A 					//Define Style //DE 3		6 props
-   AC 02 0A DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 0B 					//Define Style //DE R		6 props
-   AC 02 0B DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side
-   B5 01 01 					//New Signals "flag"
-
-   A7 01 0C 					//Define Style //??		6 props
-   AC 02 0C DC					//Style Name
-   AD 04 00 00 00 00  			//Electric Enabled
-   AE 04 00 00 00 00 			//Semaphore Enabled
-   B4 01 00 					//Signal Wrong Side
+   B4 01 00 					//Signal Wrong Side (offset 0x9E)
    B5 01 01 					//New Signals "flag"
 
    A7 01 0D 					//Define Style //ETCS		6 props
@@ -1662,14 +1602,14 @@
    B5 01 01 					//New Signals "flag"
 
 //!!Fatal Error (44): Invalid feature byte.
-  941 * 7	 03 0E 01 00 00 F8 00
+  939 * 7	 03 0E 01 00 00 F8 00
 
 
-  942 * 6	 07 00 01 03 01 02
+  940 * 6	 07 00 01 03 01 02
 
 //UK A0+A3
 //!!Fatal Error (44): Invalid feature byte.
-  943 * 181	 00 0E 2E 01 FF 00 00 
+  941 * 181	 00 0E 2E 01 FF 00 00 
    AB 01 02  					//Extra Aspects
 
    A7 01 00 					//Define Style //UK 2
@@ -1722,8 +1662,8 @@
    B5 01 01 					//New Signals "flag"
 
 //!!Fatal Error (44): Invalid feature byte.
-  944 * 7	 03 0E 01 00 00 F9 00
+  942 * 7	 03 0E 01 00 00 F9 00
 //!!For feature E the following cargoIDs have not been used since their most recent definition:
-//!!F8 (last defined at sprite 935)
-//!!F9 (last defined at sprite 936)
-//!!FA (last defined at sprite 937)
+//!!F8 (last defined at sprite 933)
+//!!F9 (last defined at sprite 934)
+//!!FA (last defined at sprite 935)
