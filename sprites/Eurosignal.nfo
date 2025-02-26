@@ -10,8 +10,8 @@
 		"T" "DESC" 7f "Work In Progress" 00 
 
 		"B" "PALS" \w1 "D"
-		"B" "VRSN" \w4 \d1
-		"B" "MINV" \w4 \d0
+		"B" "VRSN" \w4 \d2
+		"B" "MINV" \w4 \d2
 		"B" "NPAR" \w1 02
 	00
 00
